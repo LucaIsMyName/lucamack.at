@@ -1,0 +1,40 @@
+@mixin button($color: 'text', $bg-color: 'transparent') {
+    color: var(--color-#{$color});
+    background-color: var(--color-#{$bg-color});
+    display: inline-block;
+    vertical-align: baseline;
+    padding-inline: var(--spacing-em-sm);
+    padding-block: var(--spacing-em-xs);
+    border: var(--px) solid var(--color-#{$color}-dark);
+    border-radius: var(--border-radius-em-xs);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: var(--font-weight-semi);
+    transition: color 0.3s ease, background-color 0.3s ease;
+    will-change: auto,
+}
+
+@mixin button-primary {
+    @include button('background', 'brand');
+    border-color: var(--color-brand-dark);
+}
+
+@mixin button-secondary {
+    @include button('text', 'secondary');
+}
+
+@mixin button-default {
+    @include button();
+}
+
+@mixin button-disabled {
+    @include button('text', 'background');
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+@mixin button-color($color: 'text', $background-color: 'background', $border-color: 'text') {
+    background-color: var(--color-#{$background-color});
+    color: var(--color-#{$color});
+    border-color: var(--color-#{$border-color});
+}

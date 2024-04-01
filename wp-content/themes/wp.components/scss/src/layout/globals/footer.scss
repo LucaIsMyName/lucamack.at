@@ -1,0 +1,175 @@
+/*
+@global: footer
+*/
+
+.footer {
+    width: 100%;
+    background-color: var(--footer--background-color);
+    border-top: var(--px) solid var(--header--border-color);
+
+    @media (min-width: map-get($map: $media-queries, $key: 'md')) {
+        @include flex(row, sm, nowrap);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media (max-width: map-get($map: $media-queries, $key: 'md')) {
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .lang-item {
+        padding-bottom: 0;
+    }
+
+    .menu-item {
+        padding-bottom: 0;
+    }
+
+    @media screen and (min-width: map-get($map: $media-queries, $key: 'md')) {
+        >* {
+            flex: 1 1 0%;
+            display: flex;
+        }
+
+        >*:nth-child(1) {
+
+            justify-content: flex-start;
+        }
+
+        >*:nth-child(2) {
+
+            justify-content: center;
+            flex: 1 1 40%;
+        }
+
+        >*:nth-child(3) {
+
+            justify-content: flex-end;
+        }
+    }
+
+
+    .nav-action {
+        display: flex;
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+
+        @media (max-width: map-get($map: $media-queries, $key: 'md')) {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .menu {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: map-get($map: $media-queries, $key: 'md')) {
+            padding: var(--spacing-sm);
+        }
+
+        @media (max-width: map-get($map: $media-queries, $key: 'md')) {
+            // margin-bottom: var(--spacing-sm)
+        }
+
+        margin-inline: var(--spacing-sm);
+
+        a {
+            font-size: var(--font-size-fluid-xs)
+        }
+    }
+
+    .button {
+        @include button();
+        width: min-content;
+        color: var(--color-text-transparent);
+        border-color: var(--color-background-dark);
+        @include flex(row, 0);
+        border-radius: var(--border-radius-em-xs);
+        font-size: var(--font-size-xs);
+        font-family: var(--font-family-mono);
+        text-decoration: none;
+
+        &:is(:hover, :focus) {
+            color: var(--color-text);
+            border-color: var(--color-text-transparent);
+        }
+    }
+
+    :where(.brand) {
+        color: var(--color-text-transparent);
+        display: flex;
+        gap: var(--spacing-sm);
+        align-items: center;
+        font-size: var(--font-size-xs);
+        font-family: var(--font-family-mono);
+        width: auto;
+        padding: var(--header--spacing);
+
+        img,
+        svg {
+            height: var(--header--logo-size);
+            width: auto;
+        }
+
+        span {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    :where(.nav-wrapper) {
+        @media (max-width: map-get($map: $media-queries, $key: 'md')) {
+            padding-inline: var(--header--spacing);
+        }
+    }
+
+    :where(.nav,
+        .nav-wrapper,
+        .menu) {
+        // @media (min-width: map-get($map: $media-queries, $key: 'md')) {
+        @include flex(row, sm, nowrap);
+        align-items: center;
+        // }
+
+        padding-inline-end: var(--header--spacing);
+
+        li {
+            @media (max-width: map-get($map: $media-queries, $key: 'md')) {
+                padding-block-end: var(--header--spacing);
+            }
+        }
+
+        :where(ul) {
+
+            list-style: none;
+            margin: 0;
+            padding-inline-start: 0;
+
+        }
+
+        :where(a) {
+            @include nav-link();
+            font-family: var(--font-family-display);
+            font-size: var(--font-size-sm);
+        }
+    }
+
+    :where(.nav-action a) {
+        @include button();
+        width: min-content;
+        @include flex(row, 0);
+
+        &::before {
+            content: none;
+            font-size: 1em;
+            display: block;
+            margin-inline-end: calc(var(--spacing-xxs) / 4);
+            color: var(--header--color-before-el);
+            opacity: 0.5;
+
+        }
+
+    }
+}

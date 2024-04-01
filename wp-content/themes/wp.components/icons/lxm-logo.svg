@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="clip-Logo">
+      <rect width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="Logo" clip-path="url(#clip-Logo)">
+    <rect width="512" height="512" fill="none"/>
+    <g id="Path_14" data-name="Path 14" fill="none" stroke-linecap="round">
+      <path d="M 496 496 L 16 496 L 16 16 L 496 16 L 496 496 Z" stroke="none"/>
+      <path d="M 32 32 L 32 480 L 480 480 L 480 32 L 32 32 M 7 0 L 505 0 C 508.8659973144531 0 512 3.134002685546875 512 7 L 512 505 C 512 508.8659973144531 508.8659973144531 512 505 512 L 7 512 C 3.134002685546875 512 0 508.8659973144531 0 505 L 0 7 C 0 3.134002685546875 3.134002685546875 0 7 0 Z" stroke="none" fill="currentColor"/>
+    </g>
+    <g id="Group_5" data-name="Group 5" transform="translate(64.824 117.102)">
+      <path id="Path_11" data-name="Path 11" d="M6.75,103.487v33.035l84.948-.228V103.487h0l.086-127.128c0-31.724-17.566-47.718-51.388-47.718H9.826L8.41-38.324H40.4c9.7,0,14.158,4.719,14.158,14.682l-.086,127.128Z" transform="translate(-6.75 71.359)" fill="currentColor"/>
+      <path id="Path_12" data-name="Path 12" d="M99.155-47.7,75.034-10.208,50.651-47.7H5.293L53.535,19.944,1.893,91.151l46.136.107,27.005-40.9,26.743,40.9h45.358L96.8,20.206,144.775-47.7Z" transform="translate(80.092 116.623)" fill="currentColor"/>
+      <path id="Path_13" data-name="Path 13" d="M2.16-45.634V93.324H38.342V2.608c0-15.993,5.8-23.072,12.352-23.072s11.827,6.03,11.827,23.072V93.324H98.7V2.608c0-15.993,6.059-23.072,13.138-23.072,6.03,0,11.041,6.03,11.041,23.072V93.324h36.182V2.608c0-32.773-11.274-51.388-32.249-51.388-13.634,0-27.85,8.128-32.569,23.334C89.264-41.177,80.612-48.78,67.5-48.78c-12.06,0-27.325,7.6-33.094,22.286l2.127-19.139Z" transform="translate(223.29 114.557)" fill="currentColor"/>
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="34.958" height="381.625" transform="translate(0.728 277.797) rotate(-90)" fill="currentColor"/>
+    </g>
+  </g>
+</svg>

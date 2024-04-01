@@ -1,0 +1,53 @@
+/*
+@name: columns-two
+*/
+
+.block.columns-two {
+    --columns-two--column-formula: calc(100% / 2 - var(--columns-two--gap) / 2);
+
+    >.container {
+        display: flex;
+        flex-direction: var(--columns-two--direction-mobile, column);
+        gap: var(--columns-two--gap, 0);
+        align-items: center;
+        justify-content: var(--columns-two--align, flex-start);
+
+        @media screen and (min-width: map-get($map: $media-queries, $key: 'sm')) {
+            display: flex;
+            flex-direction: row;
+            align-items: var(--columns-two--align, flex-start);
+            justify-content: center;
+
+        }
+
+        >.block {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: var(--columns-two--width-mobile);
+            max-width: var(--columns-two--width-mobile);
+
+            // max-width: var(--columns-two--width-mobile);
+            // width: var(--columns-two--width-mobile);
+            // width: 100%;
+        }
+
+        @media screen and (min-width: map-get($map: $media-queries, $key: 'sm')) {
+
+            // @include flex(row, 0, wrap);
+            // flex-direction: row;
+
+            >.block {
+                flex-basis: var(--columns-two--column-formula);
+                max-width: var(--columns-two--column-formula);
+                width: var(--columns-two--column-formula);
+            }
+
+            // >.block {
+            //     flex-grow: 0;
+            //     flex-shrink: 0;
+            //     flex: var(--columns-two--column-formula);
+            //     max-width: var(--columns-two--column-formula);
+            // }
+        }
+    }
+}

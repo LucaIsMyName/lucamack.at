@@ -1,0 +1,39 @@
+/*
+@name: info-panel
+*/
+
+.block.info-panel {
+    --info-panel--spacing: var(--spacing-sm);
+    --info-panel--text-min-lenght: var(--size-xxs);
+    --info-panel--image-size: var(--size-2);
+
+    .panel {
+        border-radius: var(--border-radius-md);
+        background-color: var(--info-panel--background-color);
+        color: var(--info-panel--color);
+        border-color: var(--info-panel--border-color);
+        padding: var(--info-panel--spacing);
+        border-width: var(--px);
+        border-style: solid;
+
+        @media (min-width: map-get($map: $media-queries, $key: 'sm')) {
+            @include flex(row, sm, wrap);
+        }
+
+        .image {
+            width: var(--info-panel--image-size);
+            height: var(--info-panel--image-size);
+
+            @media (max-width:map-get($map: $media-queries, $key: 'sm')) {
+                margin-bottom: var(--info-panel--spacing);
+            }
+        }
+
+        .text {
+            min-width: var(--info-panel--text-min-lenght);
+            flex-basis: 66%;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+    }
+}

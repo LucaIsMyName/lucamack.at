@@ -1,0 +1,293 @@
+/*
+@name: audioplayer
+*/
+
+.block.audioplayer {
+    --audioplayer--spacing: var(--spacing-em-sm);
+    --audioplayer--control-color: var(--color-text);
+    --audioplayer--control-border-radius: 999999px;
+
+    border-radius: var(--audioplayer--border-radius, 0);
+    border: var(--audioplayer--border-width, 0) solid var(--audioplayer--border-color);
+
+    ol {
+        li {
+            margin-inline-start: 0;
+
+            &:before {
+                content: none;
+            }
+        }
+    }
+
+    .button {
+        width: clamp(var(--size-1), 20%, var(--audioplayer--control-font-size));
+        height: clamp(var(--size-1), 20%, var(--audioplayer--control-font-size));
+        display: block;
+        cursor: pointer;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    // .button-play {
+    //     background-image: url('icons/play.svg');
+    // }
+
+    .button-play-pause:not([data-audioplayer-current-state="pause"]) {
+        background-image: url('icons/hero-icons/pause.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        * {
+            opacity: 0;
+        }
+    }
+
+
+    // .button-prev {
+    //     background-image: url('icons/prev.svg');
+    // }
+
+    // .button-next {
+    //     background-image: url('icons/next.svg');
+    // }
+
+    // .button-download {
+    //     background-image: url('icons/download.svg');
+    // }
+
+    .player {
+        @media (min-width: map-get($map: $media-queries, $key: 'sm')) {
+            display: flex;
+            flex-direction: var(--audioplayer--layout, column);
+            align-items: center;
+            gap: var(--audioplayer--gap, var(--spacing-sm))
+        }
+
+        >* {
+            width: 100%;
+        }
+    }
+
+    .column {
+        flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis: 0%;
+    }
+
+    .progress-container {
+        width: 100%;
+    }
+
+    [data-audioplayer-control="progress-bar"],
+    [data-audioplayer-control="volume"] {
+        width: 100%;
+        display: block;
+        height: var(--px);
+        margin-inline: auto
+    }
+
+    .volume-wrapper {
+        max-width: var(--width-xs);
+        margin-block-end: var(--audioplayer--spacing);
+        margin-inline: auto;
+
+    }
+
+    .current-track {
+        @include flex(column, sm, nowrap);
+        align-items: center;
+
+        .cover {
+            overflow: hidden;
+            width: min(100%, var(--size-xs));
+            height: auto;
+            aspect-ratio: aspect(--aspact-ratio-square, 1/1);
+
+            img {
+                // margin-inline: var(--spacing-sm);
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        .artist-title {
+            width: 100%;
+            flex: 0 0 100%;
+            font-size: calc(var(--audioplayer--control-font-size) * 0.33);
+        }
+
+        .track-title {
+            width: 100%;
+            flex: 0 0 100%;
+            font-size: calc(var(--audioplayer--control-font-size) * 0.66);
+            font-weight: var(--font-weight-bold);
+        }
+    }
+
+    .controls {
+        font-size: var(--audioplayer--control-font-size);
+        @include flex(row, sm, nowrap);
+        justify-content: var(--audioplayer--control-align-x, center);
+        align-items: var(--audioplayer--control-align-y, center);
+        // margin-inline: var(--audioplayer--spacing, var(--spacing-sm));
+        margin-block: var(--audioplayer--spacing);
+        width: 100%;
+
+        .button {
+            --size: clamp(var(--audioplayer--control-font-size) * 1, 25%, var(--audioplayer--control-font-size));
+            border-radius: var(--audioplayer--control-border-radius, 0);
+            border: var(--px) solid var(--color-text);
+            background-size: 66.6%;
+            /* https://youtu.be/WxnN05vOuSM?si=dWZiuaSPpEDf5yVI ;) */
+            position: relative;
+            padding: 0;
+            flex: 0 0 var(--size);
+            width: var(--size);
+            height: var(--size);
+            aspect-ratio: 1/1;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 66.6%;
+                height: 66.6%;
+            }
+        }
+
+        span {
+            position: absolute;
+            bottom: 1em;
+            right: 1em;
+            font-weight: var(--font-weight-bold);
+            background-color: var(--color-background);
+            color: var(--color-text);
+            border: var(--px) solid var(--color-text);
+            border-radius: var(--border-radius-pill);
+            font-size: calc(var(--font-size-xxs) * 1);
+            width: calc(var(--font-size-xxs) * 1.15);
+            height: calc(var(--font-size-xxs) * 1.15);
+            display: grid;
+            place-content: center;
+
+        }
+    }
+
+    .cover {
+        border-radius: var(--audioplayer--cover-border-radius, 0);
+        overflow: hidden;
+    }
+
+    .track {
+        font-size: var(--audioplayer--track-font-size);
+        line-height: 1;
+        @include flex(row, sm, nowrap);
+        justify-content: space-between;
+        align-items: center;
+        padding-block: calc(var(--audioplayer--spacing, var(--spacing-sm)) / 1.5);
+        border-bottom: var(--px) solid var(--color-text);
+        cursor: pointer;
+        line-height: 1;
+
+        .left {
+            @include flex(row, sm, nowrap);
+            align-items: center;
+        }
+
+        .button {
+            width: 1em;
+            height: 1em;
+            border: none;
+            padding: 0;
+            // background-color: yellow;
+        }
+
+        p {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .button-play-pause {
+            margin: 0;
+            // padding-block: 0;
+        }
+    }
+
+    /* Playlist should have scroll area max height -> whole element should a flexible aspect ratio kind'a */
+    .playlist {
+        border-top: var(--px) solid var(--color-text);
+
+        // margin-inline: var(--audioplayer--spacing, var(--spacing-sm));
+        * {
+            font-size: var(--audioplayer--track-font-size);
+
+        }
+
+        .button-play-pause {
+            width: 1em;
+            height: 1em;
+            border: none;
+            justify-self: flex-end;
+            // padding-block: var(--audioplayer--spacing);
+            border-radius: var(--audioplayer--control-border-radius);
+            border: var(--px) solid var(--audioplayer--control-background-color);
+            // background-color: yellow;
+        }
+
+        img {
+            width: var(--size-1);
+            height: var(--size-1);
+        }
+    }
+
+    :is(.track-title, .track-artist, .track-controls) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        // overflow-x: hidden;
+        // display: flex;
+        align-items: center;
+
+    }
+
+    :is(.track-title,
+        .track-artist) {
+        margin-block-end: 0;
+    }
+
+    .info {
+        text-align: center;
+        width: 100%;
+        margin-block-end: var(--audioplayer--spacing);
+
+    }
+
+    :is(.track-title) {
+        font-weight: var(--font-weight-bold);
+    }
+
+    :is(.track-title) {
+        width: 25%;
+    }
+
+    :is(.track-artist) {
+        flex: 1 1 auto;
+    }
+
+    :is(.track-controls) {
+        justify-self: flex-end;
+    }
+
+    :is(.track-controls, .track .button-play) {
+        line-height: 1;
+        flex: 0 0 auto;
+        @include flex(row, xs, nowrap);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}

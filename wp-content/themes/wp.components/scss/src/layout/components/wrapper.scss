@@ -1,0 +1,44 @@
+/*
+@name: wrapper
+*/
+
+.block.wrapper {
+    display: var(--block--display, block);
+    z-index: var(--block--z-index, initial);
+    position: relative;
+    background-image: var(--block--bg-image, none);
+    background-position: var(--block--bg-position, center);
+    background-repeat: var(--block--bg-repeat, no-repeat);
+    background-size: var(--block--bg-size, cover);
+    fill: var(--block--color-text);
+    stroke: var(--block--color-text);
+
+    @media screen and (min-width: map-get($map: $media-queries, $key: 'xs')) {
+        display: var(--block--display-sm, block);
+    }
+
+    >.container {
+        border: var(--block--border-width) var(--block--border-style, solid) var(--block--border-color, transparent);
+
+        @media screen and (min-width: map-get($map: $media-queries, $key: 'xs')) {
+            margin-block: var(--block--spacing-y--sm);
+            padding-inline: var(--block--spacing-x--sm);
+        }
+
+        @media screen and (min-width: map-get($map: $media-queries, $key: 'md')) {
+            margin-block: var(--block--spacing-y--md);
+            padding-inline: var(--block--spacing-x--md);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--block--gradient, none);
+        z-index: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

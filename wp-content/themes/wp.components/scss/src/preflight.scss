@@ -1,0 +1,706 @@
+/*
+@global: preflight
+*/
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+:where(html) {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header--height) + var(--header--spacing));
+    font-variant-ligatures: common-ligatures;
+}
+
+/* Sections
+     ========================================================================== */
+
+/**
+   * Remove the margin in all browsers.
+   */
+html {
+    background-color: var(--color-background);
+}
+
+:where(body) {
+    background-color: var(--color-background);
+    margin: 0;
+    font-size: var(--font-size-fluid-sm);
+    overflow-x: hidden;
+    font-family: var(--font-family-sans);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    // transition: color var(--transition-medium), background-color var(--transition-medium), border-color var(--transition-medium), stroke var(--transition-medium), fill var(--transition-medium);
+}
+
+:where(body) * {
+    // transition: color var(--transition-medium), background-color var(--transition-medium), border-color var(--transition-medium), stroke var(--transition-medium), fill var(--transition-medium);
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+
+:where(main) {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Grouping content
+     ========================================================================== */
+
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+:where(hr) {
+    box-sizing: border-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+:where(pre) {
+    font-family: var(--font-family-mono);
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+
+:where(a) {
+    background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+:where(abbr[title]) {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+:where(b,
+    strong) {
+    font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+:where(code,
+    kbd,
+    samp) {
+    font-family: var(--font-family-mono);
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+:focus {
+    outline: var(--px) solid rgba(0, 0, 0, 0.5);
+
+    [color-theme="dark"] & {
+        outline-color: rgba(255, 255, 255, 0.5);
+    }
+
+    outline-offset: var(--px);
+}
+
+[contenteditable] {
+    &:focus {
+        outline: none;
+    }
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+
+:where(small) {
+    font-size: 80%;
+}
+
+:where(ol, ul) {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+
+:where(sub,
+    sup) {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+:where(sub) {
+    bottom: -0.25em;
+}
+
+:where(sup) {
+    top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+
+:where(img) {
+    border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+
+:where(button,
+    input,
+    optgroup,
+    select,
+    textarea) {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: var(--line-height-sm);
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+:where(button,
+    input) {
+    /* 1 */
+    overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+:where(button,
+    select) {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+:where(button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"]) {
+    -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+:where(button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner) {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+:where(button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring) {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+
+:where(fieldset) {
+    padding: var(--spacing-em-md) var(--spacing-em-sm);
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+:where(legend) {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+
+:where(progress) {
+    vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+
+:where(textarea) {
+    overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+:where([type="checkbox"],
+    [type="radio"]) {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+:where([type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button) {
+    height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+:where([type="search"]) {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+
+:where([type="search"]::-webkit-search-decoration) {
+    -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+:where(::-webkit-file-upload-button) {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+
+:where(details) {
+    display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+
+:where(summary) {
+    display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+
+/**
+   * Add the correct display in IE 10+.
+   */
+
+:where(template) {
+    display: none;
+}
+
+
+:where(figure, img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+
+:where([hidden]) {
+    display: none;
+}
+
+:where(button) {
+    @include button();
+}
+
+:where(hr) {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: auto;
+    max-width: 100%;
+    border-top: var(--divider-height, var(--px)) var(--divider-style, solid) var(--divider-color, var(--color-text));
+}
+
+:where(.visually-hidden,
+    .vh,
+    .vh-only) {
+    @include visually-hidden();
+}
+
+:where(.screen-reader,
+    .sr,
+    .sr-only) {
+    @include screen-reader();
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+    text-wrap: balance
+}
+
+:where(p, small) {
+    text-wrap: pretty;
+}
+
+// NInja forms
+.nf-form-content {
+    padding: 0 !important;
+    margin: 0 auto;
+
+    .listradio-container {
+        :where([data-wysiwyg]) ul li::before {
+            display: none !important;
+            content: none !important;
+        }
+    }
+}
+
+.nf-form-content .list-select-wrap .nf-field-element>div:focus,
+.nf-form-content input:not([type=button]):focus,
+.nf-form-content textarea:focus {
+    background: transparent !important;
+    border-color: var(--color-background-dark) !important;
+    color: var(--color-text-transparent) !important;
+    outline: var(--px) solid var(--color-text-transparent) !important;
+    outline-offset: var(--px) !important;
+    transition: all .5s !important;
+}
+
+.nf-form-content .list-select-wrap .nf-field-element>div,
+.nf-form-content input:not([type=button]),
+.nf-form-content textarea {
+    background: var(--color-background) !important;
+    border-radius: var(--spacing-em-xs) !important;
+    border: var(--px) solid var(--color-text-transparent) !important;
+    box-shadow: none !important;
+    color: var(--color-text-light) !important;
+    transition: all .5s !important;
+    width: 100%;
+    max-height: 50ch;
+
+    &:hover {
+        outline: var(--px) solid var(--color-text-transparent);
+    }
+
+    &:focus {
+        background: var(--color-background-transparent) !important;
+        border-color: var(--color-text) !important;
+        outline: var(--px) solid var(--color-text-transparent);
+        outline-offset: var(--px) !important;
+    }
+}
+
+.nf-form-fields-required {
+    margin-block-end: var(--spacing-em-sm);
+}
+
+.nf-error.field-wrap .nf-field-element:after {
+    background: var(--color-red) !important;
+    color: var(--color-background) !important;
+}
+
+.nf-error .nf-error-msg {
+    color: var(--color-red) !important;
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-em-sm);
+}
+
+.nf-after-field .nf-error-msg {
+    margin-right: var(--spacing-xs) !important;
+}
+
+.nf-error-msg,
+.ninja-forms-req-symbol {
+    color: var(--color-red) !important;
+}
+
+.nf-form-content .nf-error .ninja-forms-field {
+    border-color: var(--color-red) !important;
+}
+
+.nf-field-container {
+    margin-bottom: var(--spacing-em-md);
+}
+
+.nf-form-cont {
+    li {
+        &::before {
+            display: none;
+            content: '';
+        }
+    }
+}
+
+// Radio
+.listradio-wrap .nf-field-element label:after {
+    background: var(--color-background) !important;
+    border: 2px solid var(--color-text-transparent) !important;
+    transition: all .5s !important;
+}
+
+.listradio-wrap .nf-field-element label:after {
+    border-radius: 50% !important;
+    content: "" !important;
+    width: 18px !important;
+    height: 18px !important;
+    position: absolute !important;
+    left: -30px !important;
+    bottom: var(--px) !important;
+    top: 0.05em !important;
+    border: var(--px) solid var(--color-text-transparent) !important;
+}
+
+.listradio-wrap .nf-field-element label.nf-checked-label:before {
+    background: var(--color-text) !important;
+}
+
+.listradio-wrap .nf-field-element label:after {
+    background: var(--color-background) !important;
+    border: var(--px) solid var(--color-text-transparent) !important;
+    transition: all .5s !important;
+}
+
+.listradio-wrap .nf-field-element label:after {
+    border-radius: 50% !important;
+    content: "" !important;
+    width: 18px !important;
+    height: 18px !important;
+    position: absolute !important;
+    left: -30px !important;
+    bottom: 1px !important;
+    top: 0.05em !important;
+}
+
+// // CHeck
+
+.checkbox-wrap .nf-field-element label:after,
+.checkbox-wrap .nf-field-label label:after,
+.listcheckbox-wrap .nf-field-element label:after,
+.listcheckbox-wrap .nf-field-label label:after {
+    background: var(--color-background) !important;
+    border-color: var(--color-text-transparent) !important;
+    border-radius: 2px !important;
+    border: var(--px) solid var(--color-text-transparent) !important;
+    transition: all .5s !important;
+}
+
+
+.checkbox-wrap .nf-field-element label.nf-checked-label:before,
+.checkbox-wrap .nf-field-label label.nf-checked-label:before,
+.listcheckbox-wrap .nf-field-element label.nf-checked-label:before,
+.listcheckbox-wrap .nf-field-label label.nf-checked-label:before {
+    color: var(--color-text) !important;
+    opacity: 1;
+    transition: all .5s;
+}
+
+// .listcheckbox-container .nf-field-element label:after {
+//     top: 3px !important;
+//     bottom: auto !important;
+// }
+
+// .checkbox-wrap .nf-field-element label:after,
+// .checkbox-wrap .nf-field-label label:after,
+// .listcheckbox-wrap .nf-field-element label:after,
+// .listcheckbox-wrap .nf-field-label label:after {
+//     border: var(--px) solid !important;
+//     content: "" !important;
+//     width: 18px !important;
+//     height: 18px !important;
+//     position: absolute !important;
+//     left: -28px !important;
+//     bottom: 0 !important;
+// }
+
+.flatpickr-calendar {
+    font-family: var(--font-family-mono);
+    font-weight: 500 !important;
+
+    .flatpickr-monthDropdown-months {
+        font-weight: 700;
+    }
+}
+
+.nf-response-msg {
+    border-radius: var(--spacing-xxs) !important;
+    padding: var(--spacing-em-sm) var(--spacing-em-md) !important;
+    margin-bottom: var(--spacing-em-md) !important;
+}
+
+.nf-form-content {
+
+
+    input[type="submit"] {
+        background: var(--color-background) !important;
+        border: var(--px) solid var(--color-text) !important;
+        color: var(--color-text) !important;
+        font-size: var(--font-size-sm) !important;
+        font-family: var(--font-family-mono) !important;
+        font-weight: 700 !important;
+        padding: var(--spacing-em-sm) var(--spacing-em-md) !important;
+        transition: all .5s !important;
+        height: auto !important;
+        cursor: pointer !important;
+
+        &:hover {
+            background: var(--color-background-dark) !important;
+            border-color: var(--color-text) !important;
+        }
+    }
+}
+
+.nf-form-content select.ninja-forms-field {
+    background-color: var(--color-background) !important;
+    color: var(--color-text-transparent) !important;
+    border: var(--px) solid var(--color-text-transparent) !important;
+    font-family: var(--font-family-mono) !important;
+    font-size: var(--font-size-sm) !important;
+    border-radius: var(--spacing-xxs) !important;
+}
+
+.nf-pass.field-wrap .nf-field-element:after {
+    color: var(--color-blue) !important;
+    font-family: FontAwesome;
+    font-size: 30px;
+    content: "\f058";
+    position: absolute;
+    top: 0;
+    right: 16px;
+    height: 50px;
+    line-height: 50px;
+    transition: all .5s;
+}
+
+.nf-pass textarea.ninja-forms-field {
+    border-color: inherit !important;
+    transition: all .5s;
+}
+
+.nf-error-msg {
+    color: var(--color-red) !important;
+    font-size: var(--font-size-xs) !important;
+    margin-top: var(--spacing-em-sm) !important;
+}
+
+.nf-form-fields-required {
+    display: none !important;
+}
+
+.nf-error.field-wrap .nf-field-element:after {
+    display: none !important
+}

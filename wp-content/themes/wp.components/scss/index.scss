@@ -1,0 +1,94 @@
+/*
+Theme Name: WP Components
+Author: Luca Mack
+Author URI: https://lucamack.at/
+Theme URI: https://github.com/LucaIsMyName/wp.components
+Description: Wireframe Layzblock Theme
+Tags: blog, one-column, two-columns, three-columns, custom-background, custom-logo, featured-images, lazy-blocks
+Version: 0.1
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: components
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+// import 'src/mixins'
+@import 'src/mixins/globals.scss';
+@import 'src/mixins/button.scss';
+@import 'src/mixins/badge.scss';
+@import 'src/mixins/modal.scss';
+@import 'src/mixins/flex.scss';
+@import 'src/mixins/grid.scss';
+
+// import 'src'
+@import 'src/config.scss';
+@import 'src/preflight.scss';
+
+// import 'src/layout/globals'
+@import 'src/layout/globals/font-face.scss';
+@import 'src/layout/globals/splash-screen.scss';
+@import 'src/layout/globals/tooltip.scss';
+@import 'src/layout/globals/scrollbar.scss';
+@import 'src/layout/globals/header.scss';
+@import 'src/layout/globals/footer.scss';
+@import 'src/layout/globals/main.scss';
+@import 'src/layout/globals/block.scss';
+
+// import 'src/layout/components'
+@import 'src/layout/components/accordion.scss';
+@import 'src/layout/components/audioplayer.scss';
+@import 'src/layout/components/buttons.scss';
+@import 'src/layout/components/card.scss';
+@import 'src/layout/components/description-list.scss';
+@import 'src/layout/components/link.scss';
+@import 'src/layout/components/divider.scss';
+@import 'src/layout/components/feed.scss';
+@import 'src/layout/components/form.scss';
+@import 'src/layout/components/heading.scss';
+@import 'src/layout/components/hero.scss';
+@import 'src/layout/components/pre-footer.scss';
+@import 'src/layout/components/image.scss';
+@import 'src/layout/components/info-panel.scss';
+@import 'src/layout/components/sidebar.scss';
+@import 'src/layout/components/slideover.scss';
+@import 'src/layout/components/slider.scss';
+@import 'src/layout/components/tabs.scss';
+@import 'src/layout/components/text.scss';
+@import 'src/layout/components/modal.scss';
+@import 'src/layout/components/wrapper.scss';
+@import 'src/layout/components/marquee.scss';
+@import 'src/layout/components/horizontal-scroll-container.scss';
+@import 'src/layout/components/horizontal-scroll-item.scss';
+@import 'src/layout/components/table-of-contents.scss';
+@import 'src/layout/components/sticky.scss';
+
+// import 'src/layout/components/accordion'
+@import 'src/layout/components/accordion/group.scss';
+@import 'src/layout/components/accordion/item.scss';
+@import 'src/layout/components/accordion/title.scss';
+@import 'src/layout/components/accordion/content.scss';
+
+// import 'src/layout/components/columns'
+@import 'src/layout/components/columns/two.scss';
+@import 'src/layout/components/columns/three.scss';
+@import 'src/layout/components/columns/four.scss';
+@import 'src/layout/components/columns/fluid.scss';
+
+// import 'src/layout/components/forms'
+@import 'src/layout/components/forms/fieldset.scss';
+@import 'src/layout/components/forms/input.scss';
+@import 'src/layout/components/forms/select.scss';
+
+@import 'src/custom.scss';
+
+@import 'src/media/print.scss';
+
+
+
+/*-----------------
+TESTS
+-----------------*/

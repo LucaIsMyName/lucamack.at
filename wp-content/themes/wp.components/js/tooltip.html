@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --px: 1.5px;
+            --color-text-light: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="margin-block:3rem">
+        <span data-tooltip="a latin Quaerat, sapiente expedita. Ad atque expedita" >Lorem ipsum dolor</span>
+        sit amet consectetur, adipisicing elit. Quaerat, sapiente expedita. Ad atque expedita <span
+            data-tooltip="a latin a latin Quaerat, sapiente expedita. Ad atque expeditaa latin Quaerat, sapiente expedita. Ad atque expedita">maiores</span>!</p>
+    </p>
+    <p style="margin-block:3rem">
+        Lorem ipsum <span data-tooltip="a latin word" data-tooltip-opacity="0.7">dolor</span>
+        sit amet consectetur, adipisicing elit. Quaerat, sapiente expedita. Ad atque expedita maiores!
+    </p>
+    <p style="margin-block:3rem">
+        Lorem ipsum <span data-tooltip="a latin word of some sort">dolor</span>
+        sit amet consectetur, adipisicing elit. Quaerat, sapiente expedita. Ad atque expedita maiores!
+    </p>
+    <script>
+        const tooltip = {
+            anchor: 'top',
+            // offsetY: '10',
+            // offsetX: '-40',
+            // Tooltip Element
+            element: {
+                display: 'inline',
+                textDecoration: '1px dotted orange',
+            },
+            // Tooltip Content
+            content: {
+                // opacity: 0,
+                // position: 'absolute',
+                // border: '2px solid lime',
+                // background: 'white',
+                // color: 'black',
+                // padding: '0.5em',
+                maxWidth: '160px',
+                // minWidth: '120px',
+                // maxHeight: '2rem',
+                boxShadow: '1px 1px 1px #f0f0f0',
+                lineHeight: '1',
+                // fontSize: '1em',
+                fontFamily: 'inherit',
+                zIndex: '1000',
+            }
+        };
+    </script>
+    <script src="tooltip.js"></script>
+</body>
+
+</html>

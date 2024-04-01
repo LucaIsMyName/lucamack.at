@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="clip-Intro_-_7_7">
+      <rect width="1024" height="1024"/>
+    </clipPath>
+  </defs>
+  <g id="Intro_-_7_7" data-name="Intro - 7 – 7" clip-path="url(#clip-Intro_-_7_7)">
+    <rect width="1024" height="1024" fill="none"/>
+    <path id="Path_21" data-name="Path 21" d="M84.24-289.38v52.26c85.8-1.56,121.68,31.98,121.68,109.98v66.3c0,80.34,54.6,134.16,135.72,134.16h35.88V24.18C290.16,26.52,255.84-.78,255.84-59.28v-71.76c0-71.76-36.66-124.02-92.04-132.6v-.78c53.82-9.36,92.04-60.84,92.04-131.82V-468c0-58.5,34.32-85.02,121.68-83.46V-600.6H341.64c-81.12,0-135.72,53.82-135.72,134.16v66.3C205.92-322.14,170.04-288.6,84.24-289.38Z" transform="translate(281.12 775.64)" fill="currentColor"/>
+  </g>
+</svg>

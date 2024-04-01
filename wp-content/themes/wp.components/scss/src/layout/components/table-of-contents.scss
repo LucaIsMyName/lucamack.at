@@ -1,0 +1,27 @@
+.block.table-of-contents {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    li {
+        margin-left: var(--spacing-sm);
+        margin-block: var(--spacing-xs);
+        font-weight: 700;
+        li {
+            font-weight: 400;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+        border-left: var(--px) solid var(--color-background-dark);
+        :has(>li:where(:hover, :focus)) {
+            border-left: var(--px) solid var(--color-text-transparent);
+        }
+    }
+}

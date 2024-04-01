@@ -1,0 +1,49 @@
+/*
+@name: form
+*/
+
+.block.form {
+    --form--label-font-size: var(--font-size-xs);
+    --form--input-font-size: var(--font-size-fluid-md);
+    --form--input-border-radius: var(--border-radius-em-xs);
+    --form--input-border-width: var(--px);
+    --form--submit-font-size: var(--font-size-md);
+
+    >.container>form {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        :where(label) {
+            display: block;
+            font-size: var(--form--label-font-size);
+            margin-block-end: var(--spacing-em-sm);
+        }
+
+        :where(input, textarea, select) {
+            font-size: var(--form--input-font-size);
+            border: var(--form--input-border-width) solid var(--block--color-text);
+            display: block;
+            width: 100%;
+            padding: var(--form--spacing);
+            background-color: var(--form--input-background-color);
+            outline-offset: 0;
+            outline-color: none;
+            transition: outline-offset var(--transition-fast);
+            margin-block-end: var(--form--input-margin-end);
+            border-radius: var(--form--input-border-radius);
+
+            &:is(:focus) {
+                outline: var(--form--input-border-width) solid var(--color-brand);
+                outline-offset: calc(var(--px) / 2);
+            }
+        }
+
+        :where([type="submit"]) {
+            font-size: var(---form--submit-font-size);
+            @include button-primary();
+            width: auto
+        }
+    }
+}

@@ -1,0 +1,19 @@
+/*
+@name: columns-fluid
+*/
+
+.block.columns-fluid {
+    >.container {
+        @include flex(row, 0, wrap);
+        gap: var(--columns-fluid--gap);
+        align-items: var(--columns-fluid--align, flex-start);
+
+        >.block {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0%;
+            min-width: min(100%, calc(var(--columns-fluid--column-min-width, 320px) * 0.5));
+            max-width: 100%;
+        }
+    }
+}

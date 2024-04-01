@@ -1,0 +1,28 @@
+/*
+@name: marquee
+*/
+
+.block.marquee {
+    overflow-x: hidden;
+
+    [data-marquee] {
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        >* {
+            // overflow: hidden;
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}

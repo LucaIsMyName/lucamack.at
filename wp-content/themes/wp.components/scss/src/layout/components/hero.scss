@@ -1,0 +1,49 @@
+/*
+@name: hero
+*/
+
+.block.hero {
+    >.container {
+        position: relative;
+        min-height: var(--hero--min-height, 100vh);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        >.image {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            object-fit: cover;
+
+            figure {
+                object-fit: cover;
+                object-position: center;
+                overflow: hidden;
+                height: 100%;
+                position: relative;
+            }
+
+            img {
+                // position: absolute;
+                // top: 50%;
+                // left: 50%;
+                // margin: -50% 0 0 -50%;
+                width: auto;
+                min-width: 100%;
+                // max-width: 100%;
+                height: auto;
+                min-height: 100%;
+                // max-height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        >.inner-blocks {
+            width:100%;
+            >* {
+                width:100%
+            }
+        }
+    }
+}

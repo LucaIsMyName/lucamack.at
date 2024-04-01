@@ -1,0 +1,34 @@
+@mixin button-default($color: 'background', $bg-color: 'text') {
+    color: var(--color-#{$color});
+    background-color: var(--color-#{$bg-color});
+    display: inline-block;
+    padding-inline: var(--spacing-em-sm);
+    padding-block: var(--spacing-em-xs);
+    border: var(--px) solid var(--color-#{$color});
+    margin-inline-end: var(--spacing-em-sm);
+    margin-block-end: var(--spacing-em-sm);
+    transition: color 0.3s ease, background-color 0.3s ease;
+    &:is(:hover, :focus) {
+        color: var(--color-#{$bg-color});
+        background: linear-gradient(to bottom, var(--color-#{$color}), var(--color-#{$color}-dark));
+    }
+
+}
+
+@mixin button-primary {
+    @include button-default('background', 'brand');
+}
+
+@mixin button-secondary {
+    @include button-default('text', 'secondary');
+}
+
+@mixin button {
+    @include button-default();
+}
+
+@mixin button-disabled {
+    @include button-default('text', 'background');
+    opacity: 0.75;
+    pointer-events: none;
+}

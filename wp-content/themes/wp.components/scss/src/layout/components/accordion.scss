@@ -1,0 +1,64 @@
+/*
+@name: accordion
+*/
+
+.block.accordion {
+    --accordion--spacing: var(--spacing-sm);
+
+    .accordion-item {
+        margin-block-start: var(--accordion--spacing);
+        border-block-end: var(--px) solid var(--color-background-dark);
+    }
+
+    .title {
+        @include flex(row, md);
+        justify-content: space-between;
+        cursor: pointer;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+        flex: 1 1 0%;
+        white-space: normal;
+        text-overflow: initial;
+        text-align: start;
+
+        section {
+            max-width: 85%;
+            display: block;
+        }
+
+        .collapse {
+            height: 1em;
+            max-width: 25%;
+        }
+    }
+
+    .collapse {
+        display: grid;
+        place-content: baseline;
+        margin-block-start: 0.33em;
+
+    }
+
+    [aria-expanded="true"] {
+        .collapse svg {
+            transform: rotate(180deg);
+        }
+
+
+    }
+
+    .text {
+        padding-block-start: var(--accordion--spacing);
+
+        >*:last-child {
+            margin-block-end: var(--accordion--spacing);
+        }
+
+    }
+
+    [aria-hidden="false"] .text {
+        margin-block-end: var(--accordion--spacing)
+    }
+}

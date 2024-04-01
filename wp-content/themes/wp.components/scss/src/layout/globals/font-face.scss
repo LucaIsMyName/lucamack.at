@@ -1,0 +1,148 @@
+/*
+@global: font-face
+*/
+
+$fonts: (
+    // "JetBrainsMono": (
+    //     slug: "jetbrains-mono",
+    //     format: "woff2",
+    //     display: swap,
+    //     style: (
+    //         normal,
+    //     ),
+    //     weights: (
+    //         ExtraLight: (
+    //             weight: 100,
+    //         ),
+    //         Light: (
+    //             weight: 200,
+    //         ),
+    //         Thin: (
+    //             weight: 300,
+    //         ),
+    //         Regular: (
+    //             weight: 400,
+    //         ),
+    //         Medium: (
+    //             weight: 500,
+    //         ),
+    //         SemiBold: (
+    //             weight: 600,
+    //         ),
+    //         Bold: (
+    //             weight: 700,
+    //         ),
+    //         Black: (
+    //             weight: 800,
+    //         ),
+    //         UltraBlack: (
+    //             weight: 900,
+    //         ),
+    //     ),
+    // ),
+    "GeistMono": (
+        slug: "geist-mono",
+        format: "woff2",
+        display: "swap",
+        style: (
+            normal,
+        ),
+        weights: (
+            UltraLight: (
+                weight: 100,
+            ),
+            Light: (
+                weight: 200,
+            ),
+            Thin: (
+                weight: 300,
+            ),
+            Regular: (
+                weight: 400,
+            ),
+            Medium: (
+                weight: 500,
+            ),
+            SemiBold: (
+                weight: 600,
+            ),
+            Bold: (
+                weight: 700,
+            ),
+            Black: (
+                weight: 800,
+            ),
+            UltraBlack: (
+                weight: 900,
+            ),
+        ),
+    ),
+    "Geist": (
+        slug: "geist-sans",
+        format: "woff2",
+        display: "swap",
+        style: (
+            normal,
+        ),
+        weights: (
+            UltraLight: (
+                weight: 100,
+            ),
+            Light: (
+                weight: 200,
+            ),
+            Thin: (
+                weight: 300,
+            ),
+            Regular: (
+                weight: 400,
+            ),
+            Medium: (
+                weight: 500,
+            ),
+            SemiBold: (
+                weight: 600,
+            ),
+            Bold: (
+                weight: 700,
+            ),
+            Black: (
+                weight: 800,
+            ),
+            UltraBlack: (
+                weight: 900,
+            ),
+        ),
+    ),
+);
+
+@mixin generate-font-face($font-family, $slug, $format, $display, $styles, $weights) {
+    @each $style in $styles {
+        @each $weight-name, $weight-value in $weights {
+            @font-face {
+                font-family: #{$slug};
+                font-style: $style;
+                font-weight: map-get($weight-value, weight);
+                font-display: $display;
+                $filename: "#{$font-family}-#{$weight-name}";
+
+                @if $style != normal {
+                    $filename: "#{$font-family}-#{$style}";
+                }
+
+                src: url("./fonts/#{$slug}/#{$filename}.#{$format}") format("#{$format}");
+            }
+        }
+    }
+}
+
+@each $font-name, $font-props in $fonts {
+    @include generate-font-face(
+        $font-name,
+        map-get($font-props, slug),
+        map-get($font-props, format),
+        map-get($font-props, display),
+        map-get($font-props, style),
+        map-get($font-props, weights)
+    );
+}

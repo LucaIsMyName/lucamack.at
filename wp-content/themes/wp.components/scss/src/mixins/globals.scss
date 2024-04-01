@@ -1,0 +1,45 @@
+@mixin visually-hidden {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+@mixin screen-reader {
+    @include visually-hidden();
+
+    &:focus {
+        background-color: var(--color-background-dark);
+        clip: auto !important;
+        clip-path: none;
+        color: var(--color-text);
+        display: block;
+        font-size: 1em;
+        height: auto;
+        left: var(--spacing-xs);
+        line-height: normal;
+        padding: 0.5em 0.75em;
+        text-decoration: none;
+        top: var(--spacing-xs);
+        width: auto;
+        z-index: 100000;
+    }
+}
+
+// Nav Link Stying
+
+@mixin nav-link {
+    color: var(--color-text);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: var(--color-text-light);
+    }
+}

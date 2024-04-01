@@ -1,0 +1,21 @@
+/*
+@name: columns-three
+*/
+
+
+.block.columns-three {
+    @media screen and (min-width: map-get($map: $media-queries, $key: 'sm')) {
+        >.container {
+            @include flex();
+            align-items: var(--columns-three--align, flex-start);
+
+            >.block {
+                flex-grow:0;
+                flex-shrink: 0;
+                flex-basis: calc(100% / 3 - var(--columns-four--gap) / 2);
+                gap: var(--columns-three--gap, 0);
+                width: calc(100% / 3 - var(--columns-four--gap) / 2);
+            }
+        }
+    }
+}

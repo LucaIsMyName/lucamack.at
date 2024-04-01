@@ -1,0 +1,55 @@
+/*
+@global: tooltip
+*/
+
+[data-tooltip] {
+    // --hsl-bright: 66%;
+    cursor: help;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: var(--px);
+    text-decoration-color: var(--color-background-dark);
+}
+
+[tooltip] {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: var(--px);
+    text-decoration-color: rgba(0, 0, 0, 0.15);
+
+    [color-theme="dark"] & {
+        text-decoration-color: rgba(255, 255, 255, 0.15);
+    }
+}
+
+[data-tooltip-content],
+.tippy-content,
+#tooltip {
+    --tooltip--font-size: var(--font-size-fluid-xxs);
+    --tooltip--spacing: var(--spacing-em-sm);
+    --tooltip--border-radius: var(--border-radius-xs);
+    --tooltip--border: var(--px) solid rgba(0, 0, 0, 0.25);
+
+    [color-theme="dark"] & {
+        --tooltip--border: var(--px) solid rgba(255, 255, 255, 0.25);
+    }
+
+    --tooltip--color: var(--color-text);
+    --tooltip--background-color: hsla(0, 0%, 100%, 0.9);
+
+    [color-theme="dark"] & {
+        --tooltip--background-color: hsla(0, 0%, 0%, 0.9);
+    }
+
+    --tooltip--shadow: var(--shadown-sm);
+    color: var(--tooltip--color);
+    background-color: var(--color-background);
+    font-size: 0.7em;
+    border-radius: var(--tooltip--border-radius);
+    border: var(--tooltip--border);
+    box-shadow: var(--tooltip--shadow);
+    font-family: var(--font-family-mono);
+    backdrop-filter: blur(var(--spacing-sm));
+}

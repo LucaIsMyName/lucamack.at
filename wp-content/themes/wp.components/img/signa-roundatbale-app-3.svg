@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="924" viewBox="0 0 390 924">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_39" data-name="Rectangle 39" width="390" height="924" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" clip-path="url(#clip-path)">
+    <g id="Group_262" data-name="Group 262">
+      <g id="CE_Footer_-_Mobile" data-name="CE Footer - Mobile" transform="translate(0 868)">
+        <path id="Path_24" data-name="Path 24" d="M0,0H390V56H0Z" fill="#e0e1e6"/>
+        <text id="Imprint" transform="translate(276 32)" fill="#646777" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="-42.06" y="0">IMPRINT</tspan></text>
+        <text id="Privacy_Policy" data-name="Privacy Policy" transform="translate(373 32)" fill="#646777" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="-80.976" y="0">PRIVACY POLICY</tspan></text>
+        <g id="Group_144" data-name="Group 144">
+          <path id="signa-logo" d="M0,1.045V24.753H4.742V5.785h13.9V24.753h4.74V1.045ZM9.322,24.753h4.742V10.525H9.322Z" transform="translate(18 15.083)" fill="#171627"/>
+          <text id="Roundtables" transform="translate(52 35)" fill="#171627" font-size="16" font-family="IvyPrestoHeadline-Thin, IvyPresto Headline" font-weight="200" letter-spacing="0.05em"><tspan x="0" y="0">ROUNDTABLES</tspan></text>
+        </g>
+      </g>
+      <g id="CE_Roundtable_Slider_-_Mobile" data-name="CE Roundtable Slider - Mobile" transform="translate(17 396)">
+        <g id="Group_147" data-name="Group 147" transform="translate(-17 -399)">
+          <g id="Component_-_Mobile_-_Event_Card_Archived" data-name="Component - Mobile - Event Card Archived" transform="translate(17 680)">
+            <g id="Rectangle_4" data-name="Rectangle 4" fill="#e0e1e6" stroke="#9699ab" stroke-width="1.5">
+              <rect width="294" height="127" rx="1" stroke="none"/>
+              <rect x="0.75" y="0.75" width="292.5" height="125.5" rx="0.25" fill="none"/>
+            </g>
+            <g id="Group_18" data-name="Group 18" transform="translate(8 8)">
+              <g id="Group_15" data-name="Group 15">
+                <g id="Group_25" data-name="Group 25">
+                  <text id="Microsoft_E5_License_Agreement" data-name="Microsoft E5 License Agreement" transform="translate(0 16)" fill="#171627" font-size="28" font-family="FuturaPT-Book, Futura PT" letter-spacing="0.01em"><tspan x="0" y="27">MICROSOFT E5 </tspan><tspan x="0" y="55">LICENSE AGREEMENT</tspan></text>
+                  <g id="Group_13" data-name="Group 13">
+                    <text id="Licenses" transform="translate(21 12)" fill="#171627" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">Licenses</tspan></text>
+                    <g id="Icon_Copy" data-name="Icon Copy">
+                      <g id="Group_1" data-name="Group 1">
+                        <g id="Group_2" data-name="Group 2">
+                          <rect id="Rectangle_2" data-name="Rectangle 2" width="16" height="16" fill="none"/>
+                        </g>
+                      </g>
+                      <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(2.5 2.5)" fill="none" stroke="#595c6b" stroke-width="1">
+                        <circle cx="5.5" cy="5.5" r="5.5" stroke="none"/>
+                        <circle cx="5.5" cy="5.5" r="5" fill="none"/>
+                      </g>
+                      <path id="Path_28" data-name="Path 28" d="M0,2.443S.341,0,2.553,0,4.965,2.412,4.965,2.412a2.4,2.4,0,0,1-2.5,2.5" transform="translate(8.041 11.451) rotate(-135)" fill="none" stroke="#595c6b" stroke-width="1"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="Group_169" data-name="Group 169" transform="translate(0 84)">
+                <g id="Group_24" data-name="Group 24" transform="translate(0 8)">
+                  <g id="Group_14" data-name="Group 14">
+                    <text id="_1020_Wien" data-name="1020 Wien" transform="translate(21 12)" fill="#646777" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">1020 Wien</tspan></text>
+                    <g id="Icon_Pin" data-name="Icon Pin">
+                      <g id="Group_1-2" data-name="Group 1">
+                        <g id="Group_2-2" data-name="Group 2">
+                          <rect id="Rectangle_2-2" data-name="Rectangle 2" width="16" height="16" fill="none"/>
+                        </g>
+                      </g>
+                      <g id="Icon_feather-map-pin" data-name="Icon feather-map-pin" transform="translate(3.909 3)">
+                        <path id="Path_12" data-name="Path 12" d="M12.682,5.591c0,3.182-4.091,5.909-4.091,5.909S4.5,8.773,4.5,5.591a4.091,4.091,0,1,1,8.182,0Z" transform="translate(-4.5 -1.5)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_13" data-name="Path 13" d="M16.227,11.864A1.364,1.364,0,1,1,14.864,10.5a1.364,1.364,0,0,1,1.364,1.364Z" transform="translate(-10.773 -7.773)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                      </g>
+                    </g>
+                  </g>
+                  <g id="Group_16" data-name="Group 16" transform="translate(91)">
+                    <text id="_1.3._-_3.3.2023" data-name="1.3. - 3.3.2023" transform="translate(21 12)" fill="#646777" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">1.3. - 3.3.2023</tspan></text>
+                    <g id="Icon_Calendar" data-name="Icon Calendar">
+                      <g id="Group_1-3" data-name="Group 1">
+                        <g id="Group_2-3" data-name="Group 2">
+                          <rect id="Rectangle_2-3" data-name="Rectangle 2" width="16" height="16" fill="none"/>
+                        </g>
+                      </g>
+                      <g id="Icon_feather-calendar" data-name="Icon feather-calendar" transform="translate(3.5 3)">
+                        <path id="Path_8" data-name="Path 8" d="M5.5,6h7a1,1,0,0,1,1,1v7a1,1,0,0,1-1,1h-7a1,1,0,0,1-1-1V7A1,1,0,0,1,5.5,6Z" transform="translate(-4.5 -5)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_9" data-name="Path 9" d="M24,3V5" transform="translate(-17.5 -3)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_10" data-name="Path 10" d="M12,3V5" transform="translate(-9.5 -3)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_11" data-name="Path 11" d="M4.5,15h9" transform="translate(-4.5 -11)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+                <line id="Line_7" data-name="Line 7" x2="276.5" transform="translate(0.5)" fill="none" stroke="#9699ab" stroke-width="1.5"/>
+                <g id="Component_-_Badge" data-name="Component - Badge" transform="translate(219 7)">
+                  <g id="Rectangle_6" data-name="Rectangle 6" fill="none" stroke="#707070" stroke-width="1">
+                    <rect width="58" height="19" rx="1" stroke="none"/>
+                    <rect x="0.5" y="0.5" width="57" height="18" rx="0.5" fill="none"/>
+                  </g>
+                  <text id="Archived" transform="translate(5 3)" fill="#171627" font-size="10" font-family="FuturaPT-Book, Futura PT" letter-spacing="0.05em"><tspan x="-23.49" y="10">ARCHIVED</tspan></text>
+                </g>
+              </g>
+            </g>
+            <g id="Group_158" data-name="Group 158" transform="translate(-1298 -822.516)">
+              <rect id="Rectangle_9" data-name="Rectangle 9" width="127" height="83" transform="translate(1588 949.516) rotate(-90)" fill="url(#linear-gradient)"/>
+            </g>
+          </g>
+          <g id="Group_55" data-name="Group 55" transform="translate(0 -20)">
+            <g id="Component_-_Mobile_-_Event_Card_Date_TBD_Main_Nav" data-name="Component - Mobile - Event Card Date TBD Main Nav" transform="translate(17 523)">
+              <g id="Rectangle_4-2" data-name="Rectangle 4" fill="#fff" stroke="#595c6b" stroke-width="1.5">
+                <rect width="294" height="127" rx="1" stroke="none"/>
+                <rect x="0.75" y="0.75" width="292.5" height="125.5" rx="0.25" fill="none"/>
+              </g>
+              <g id="Group_18-2" data-name="Group 18" transform="translate(8 8)">
+                <g id="Group_15-2" data-name="Group 15">
+                  <text id="CISO_Meeting_Get_Together" data-name="CISO Meeting &amp; Get Together" transform="translate(0 16)" fill="#171627" font-size="28" font-family="FuturaPT-Book, Futura PT" letter-spacing="0.01em"><tspan x="0" y="27">CISO MEETING &amp; GET </tspan><tspan x="0" y="55">TOGETHER</tspan></text>
+                  <g id="Group_13-2" data-name="Group 13">
+                    <text id="CISO" transform="translate(21 12)" fill="#171627" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">CISO</tspan></text>
+                    <g id="Icon_Lock" data-name="Icon Lock">
+                      <g id="Group_1-4" data-name="Group 1">
+                        <g id="Group_2-4" data-name="Group 2">
+                          <rect id="Rectangle_2-4" data-name="Rectangle 2" width="16" height="16" fill="none"/>
+                        </g>
+                      </g>
+                      <g id="Icon_feather-lock" data-name="Icon feather-lock" transform="translate(3.5 3)">
+                        <path id="Path_26" data-name="Path 26" d="M5.5,16.5h7a1.1,1.1,0,0,1,1,1.184v4.143a1.1,1.1,0,0,1-1,1.184h-7a1.1,1.1,0,0,1-1-1.184V17.684A1.1,1.1,0,0,1,5.5,16.5Z" transform="translate(-4.5 -13.01)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_27" data-name="Path 27" d="M10.5,6.4V5.5a2.5,2.5,0,1,1,5,0v.9" transform="translate(-8.5 -3)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(2.5 4.5)" fill="none" stroke="#595c6b" stroke-width="1">
+                          <circle cx="2" cy="2" r="2" stroke="none"/>
+                          <circle cx="2" cy="2" r="1.5" fill="none"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+                <g id="Group_164" data-name="Group 164" transform="translate(0 13)">
+                  <g id="Group_14-2" data-name="Group 14" transform="translate(0 81)">
+                    <text id="_1020_Wien-2" data-name="1020 Wien" transform="translate(21 12)" fill="#171627" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">1020 Wien</tspan></text>
+                    <g id="Icon_Pin-2" data-name="Icon Pin">
+                      <g id="Group_1-5" data-name="Group 1">
+                        <g id="Group_2-5" data-name="Group 2">
+                          <rect id="Rectangle_2-5" data-name="Rectangle 2" width="16" height="16" fill="none"/>
+                        </g>
+                      </g>
+                      <g id="Icon_feather-map-pin-2" data-name="Icon feather-map-pin" transform="translate(3.909 3)">
+                        <path id="Path_12-2" data-name="Path 12" d="M12.682,5.591c0,3.182-4.091,5.909-4.091,5.909S4.5,8.773,4.5,5.591a4.091,4.091,0,1,1,8.182,0Z" transform="translate(-4.5 -1.5)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_13-2" data-name="Path 13" d="M16.227,11.864A1.364,1.364,0,1,1,14.864,10.5a1.364,1.364,0,0,1,1.364,1.364Z" transform="translate(-10.773 -7.773)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                      </g>
+                    </g>
+                  </g>
+                  <g id="Group_16-2" data-name="Group 16" transform="translate(91.432 81)">
+                    <text id="In_Abstimmung" data-name="In Abstimmung" transform="translate(20.568 12)" fill="#171627" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">In Abstimmung</tspan></text>
+                    <g id="Icon_Calendar-2" data-name="Icon Calendar" transform="translate(-0.432)">
+                      <g id="Group_1-6" data-name="Group 1">
+                        <g id="Group_2-6" data-name="Group 2">
+                          <rect id="Rectangle_2-6" data-name="Rectangle 2" width="16" height="16" fill="none"/>
+                        </g>
+                      </g>
+                      <g id="Icon_feather-calendar-2" data-name="Icon feather-calendar" transform="translate(3.5 3)">
+                        <path id="Path_8-2" data-name="Path 8" d="M5.5,6h7a1,1,0,0,1,1,1v7a1,1,0,0,1-1,1h-7a1,1,0,0,1-1-1V7A1,1,0,0,1,5.5,6Z" transform="translate(-4.5 -5)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_9-2" data-name="Path 9" d="M24,3V5" transform="translate(-17.5 -3)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_10-2" data-name="Path 10" d="M12,3V5" transform="translate(-9.5 -3)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_11-2" data-name="Path 11" d="M4.5,15h9" transform="translate(-4.5 -11)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                      </g>
+                    </g>
+                  </g>
+                  <line id="Line_7-2" data-name="Line 7" x2="276.5" transform="translate(0.5 73)" fill="none" stroke="#dcdde2" stroke-width="1.5"/>
+                </g>
+              </g>
+            </g>
+            <g id="Component_-_Mobile_-_Event_Card_Date_TBD_Main_Nav-2" data-name="Component - Mobile - Event Card Date TBD Main Nav" transform="translate(327 523)">
+              <g id="Rectangle_4-3" data-name="Rectangle 4" fill="#fff" stroke="#595c6b" stroke-width="1.5">
+                <rect width="294" height="127" rx="1" stroke="none"/>
+                <rect x="0.75" y="0.75" width="292.5" height="125.5" rx="0.25" fill="none"/>
+              </g>
+              <g id="Group_18-3" data-name="Group 18" transform="translate(8 8)">
+                <g id="Group_15-3" data-name="Group 15">
+                  <text id="CISO_Meeting_Get_Together-2" data-name="CISO Meeting &amp; Get Together" transform="translate(0 16)" fill="#171627" font-size="28" font-family="FuturaPT-Book, Futura PT" letter-spacing="0.01em"><tspan x="0" y="27">CISO MEETING &amp; GET </tspan><tspan x="0" y="55">TOGETHER</tspan></text>
+                  <g id="Group_13-3" data-name="Group 13">
+                    <text id="CISO-2" data-name="CISO" transform="translate(21 12)" fill="#171627" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">CISO</tspan></text>
+                    <g id="Icon_Lock-2" data-name="Icon Lock">
+                      <g id="Group_1-7" data-name="Group 1">
+                        <g id="Group_2-7" data-name="Group 2">
+                          <rect id="Rectangle_2-7" data-name="Rectangle 2" width="16" height="16" fill="none"/>
+                        </g>
+                      </g>
+                      <g id="Icon_feather-lock-2" data-name="Icon feather-lock" transform="translate(3.5 3)">
+                        <path id="Path_26-2" data-name="Path 26" d="M5.5,16.5h7a1.1,1.1,0,0,1,1,1.184v4.143a1.1,1.1,0,0,1-1,1.184h-7a1.1,1.1,0,0,1-1-1.184V17.684A1.1,1.1,0,0,1,5.5,16.5Z" transform="translate(-4.5 -13.01)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_27-2" data-name="Path 27" d="M10.5,6.4V5.5a2.5,2.5,0,1,1,5,0v.9" transform="translate(-8.5 -3)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <g id="Ellipse_2-2" data-name="Ellipse 2" transform="translate(2.5 4.5)" fill="none" stroke="#595c6b" stroke-width="1">
+                          <circle cx="2" cy="2" r="2" stroke="none"/>
+                          <circle cx="2" cy="2" r="1.5" fill="none"/>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+                <g id="Group_164-2" data-name="Group 164" transform="translate(0 13)">
+                  <g id="Group_14-3" data-name="Group 14" transform="translate(0 81)">
+                    <text id="_1020_Wien-3" data-name="1020 Wien" transform="translate(21 12)" fill="#171627" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">1020 Wien</tspan></text>
+                    <g id="Icon_Pin-3" data-name="Icon Pin">
+                      <g id="Group_1-8" data-name="Group 1">
+                        <g id="Group_2-8" data-name="Group 2">
+                          <rect id="Rectangle_2-8" data-name="Rectangle 2" width="16" height="16" fill="none"/>
+                        </g>
+                      </g>
+                      <g id="Icon_feather-map-pin-3" data-name="Icon feather-map-pin" transform="translate(3.909 3)">
+                        <path id="Path_12-3" data-name="Path 12" d="M12.682,5.591c0,3.182-4.091,5.909-4.091,5.909S4.5,8.773,4.5,5.591a4.091,4.091,0,1,1,8.182,0Z" transform="translate(-4.5 -1.5)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_13-3" data-name="Path 13" d="M16.227,11.864A1.364,1.364,0,1,1,14.864,10.5a1.364,1.364,0,0,1,1.364,1.364Z" transform="translate(-10.773 -7.773)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                      </g>
+                    </g>
+                  </g>
+                  <g id="Group_16-3" data-name="Group 16" transform="translate(91.432 81)">
+                    <text id="In_Abstimmung-2" data-name="In Abstimmung" transform="translate(20.568 12)" fill="#171627" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">In Abstimmung</tspan></text>
+                    <g id="Icon_Calendar-3" data-name="Icon Calendar" transform="translate(-0.432)">
+                      <g id="Group_1-9" data-name="Group 1">
+                        <g id="Group_2-9" data-name="Group 2">
+                          <rect id="Rectangle_2-9" data-name="Rectangle 2" width="16" height="16" fill="none"/>
+                        </g>
+                      </g>
+                      <g id="Icon_feather-calendar-3" data-name="Icon feather-calendar" transform="translate(3.5 3)">
+                        <path id="Path_8-3" data-name="Path 8" d="M5.5,6h7a1,1,0,0,1,1,1v7a1,1,0,0,1-1,1h-7a1,1,0,0,1-1-1V7A1,1,0,0,1,5.5,6Z" transform="translate(-4.5 -5)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_9-3" data-name="Path 9" d="M24,3V5" transform="translate(-17.5 -3)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_10-3" data-name="Path 10" d="M12,3V5" transform="translate(-9.5 -3)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        <path id="Path_11-3" data-name="Path 11" d="M4.5,15h9" transform="translate(-4.5 -11)" fill="none" stroke="#595c6b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                      </g>
+                    </g>
+                  </g>
+                  <line id="Line_7-3" data-name="Line 7" x2="276.5" transform="translate(0.5 73)" fill="none" stroke="#dcdde2" stroke-width="1.5"/>
+                </g>
+              </g>
+            </g>
+            <g id="Group_157" data-name="Group 157" transform="translate(-1281 -299.516)">
+              <rect id="Rectangle_9-2" data-name="Rectangle 9" width="127" height="83" transform="translate(1588 949.516) rotate(-90)" fill="url(#linear-gradient)"/>
+            </g>
+          </g>
+          <g id="Group_59" data-name="Group 59" transform="translate(0 -20)">
+            <text id="Current" transform="translate(17 491)" fill="#646777" font-size="12" font-family="FuturaPT-Book, Futura PT" letter-spacing="0.05em"><tspan x="0" y="12">CURRENT</tspan></text>
+          </g>
+          <g id="Group_58" data-name="Group 58" transform="translate(0 -20)">
+            <text id="Archived-2" data-name="Archived" transform="translate(17 668)" fill="#646777" font-size="12" font-family="FuturaPT-Book, Futura PT" letter-spacing="0.05em"><tspan x="0" y="12">ARCHIVED</tspan></text>
+          </g>
+        </g>
+        <g id="Component_-_Mobile_-_Subheader" data-name="Component - Mobile  - Subheader">
+          <text id="Roundtables-2" data-name="Roundtables" transform="translate(48)" fill="#171627" font-size="32" font-family="IvyPrestoHeadline-Thin, IvyPresto Headline" font-weight="200" letter-spacing="0.01em"><tspan x="0" y="38">ROUNDTABLES</tspan></text>
+          <g id="Icon_Chat" data-name="Icon Chat" transform="translate(0 10)">
+            <rect id="Rectangle_23" data-name="Rectangle 23" width="32" height="32" fill="none"/>
+            <path id="Icon_feather-message-circle" data-name="Icon feather-message-circle" d="M22.5,13a8.38,8.38,0,0,1-.9,3.8A8.5,8.5,0,0,1,14,21.5a8.38,8.38,0,0,1-3.8-.9L4.5,22.5l1.9-5.7A8.38,8.38,0,0,1,5.5,13a8.5,8.5,0,0,1,4.7-7.6A8.38,8.38,0,0,1,14,4.5h.5a8.48,8.48,0,0,1,8,8Z" transform="translate(2.5 2.5)" fill="none" stroke="#9699ab" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          </g>
+        </g>
+      </g>
+      <g id="CE_Page_Hero_-_without_Image_Homepage_-_Mobile" data-name="CE Page Hero - without Image Homepage - Mobile" transform="translate(17 72)">
+        <text id="Welcome_Max_Mustermann" data-name="Welcome Max Mustermann" fill="#171627" font-size="40" font-family="IvyPrestoHeadline-Thin, IvyPresto Headline" font-weight="200"><tspan x="0" y="47">WELCOME MAX </tspan><tspan x="0" y="87">MUSTERMANN</tspan></text>
+        <text id="Lorem_ipsum_dolor_sit_amet_consetetur_sadipscing_elitr_sed_diam_nonumy_eirmod_tempor_invidunt_ut_labore_et_dolore_magna_aliquyam_erat_sed_diam_voluptua._At_vero_eos_et_accusam_et_justo_duo_dolores_et_ea_rebum._Stet_clita_kasd_gubergren_no_sea_takimata_" data-name="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata " transform="translate(0 115)" fill="#171627" font-size="18" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="18">Lorem ipsum dolor sit amet, consetetur sadipscing </tspan><tspan x="0" y="40">elitr, sed diam nonumy eirmod tempor invidunt ut </tspan><tspan x="0" y="62">labore et dolore magna aliquyam erat, sed diam </tspan><tspan x="0" y="84">voluptua. At vero eos et accusam et justo duo </tspan><tspan x="0" y="106">dolores et ea rebum. Stet clita kasd gubergren, no </tspan><tspan x="0" y="128">sea takimata sanctus est Lorem ipsum dolor sit </tspan><tspan x="0" y="150">amet. Lorem ipsum dolor sit amet, consetetur </tspan><tspan x="0" y="172">sadipscing elitr, sed diam nonumy eirmod tempor</tspan></text>
+      </g>
+      <g id="CE_Main_Nav_-_Mobile" data-name="CE Main Nav - Mobile">
+        <path id="Path_24-2" data-name="Path 24" d="M0,0H390V56H0Z" fill="#171627"/>
+        <path id="signa-logo-2" data-name="signa-logo" d="M0,1.045V24.753H4.742V5.785h13.9V24.753h4.74V1.045ZM9.322,24.753h4.742V10.525H9.322Z" transform="translate(18 15.083)" fill="#fff"/>
+        <g id="Open_Main_Nav" data-name="Open Main Nav" transform="translate(341 12)">
+          <g id="Group_1-10" data-name="Group 1">
+            <g id="Group_2-10" data-name="Group 2">
+              <rect id="Rectangle_2-10" data-name="Rectangle 2" width="32" height="32" fill="none"/>
+            </g>
+          </g>
+          <g id="Group_5" data-name="Group 5" transform="translate(0 -0.5)">
+            <line id="Line_2" data-name="Line 2" x2="21" transform="translate(5.5 11.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+            <line id="Line_3" data-name="Line 3" x2="21" transform="translate(5.5 16.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+            <line id="Line_4" data-name="Line 4" x2="21" transform="translate(5.5 21.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+          </g>
+        </g>
+        <g id="Component_-_Mobile_-_Language_Switcher_to_Left" data-name="Component - Mobile - Language Switcher to Left" transform="translate(260 18)">
+          <g id="Group_177" data-name="Group 177" transform="translate(-40 -17)">
+            <g id="Icon_Arrow_Right_Alt" data-name="Icon Arrow Right Alt" transform="translate(60 37) rotate(180)">
+              <g id="Group_1-11" data-name="Group 1">
+                <g id="Group_2-11" data-name="Group 2">
+                  <rect id="Rectangle_2-11" data-name="Rectangle 2" width="20" height="20" fill="none"/>
+                </g>
+              </g>
+              <g id="Group_11" data-name="Group 11" transform="translate(8.313 6.625)">
+                <path id="Path_30" data-name="Path 30" d="M-3275.767-100.9l3.375,3.375-3.375,3.375" transform="translate(3275.767 100.899)" fill="none" stroke="#9699ab" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+              </g>
+            </g>
+            <text id="EN" transform="translate(75 31)" fill="#fff" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="-14.976" y="0">EN</tspan></text>
+          </g>
+          <g id="Group_178" data-name="Group 178" transform="translate(-1 -17)">
+            <g id="Group_179" data-name="Group 179" transform="translate(-23)">
+              <text id="DE" transform="translate(42 31)" fill="rgba(23,22,39,0)" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="-13.368" y="0">DE</tspan></text>
+              <text id="IT" transform="translate(50 31)" fill="rgba(23,22,39,0)" font-size="12" font-family="FuturaPT-Book, Futura PT"><tspan x="-8.064" y="0">IT</tspan></text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

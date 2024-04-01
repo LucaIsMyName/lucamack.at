@@ -1,0 +1,49 @@
+/*
+@name: image
+*/
+
+.block.image {
+    figure {
+        border-radius: var(--image--border-radius, 0);
+        overflow: hidden;
+        box-shadow: var(--image--shadow, none);
+        outline: var(--image--border-width, 0) solid var(--image--border-color, transparent);
+        outline-offset: calc(var(--px) * -0.5);
+        position: relative;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+    img {
+        // width:100%;
+        filter: var(--image--filter);
+        transition: filter var(--transition-fast);
+
+        &:is(:focus, :hover) {
+            filter: var(--image--filter-hover);
+
+        }
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        // font-size: var(--font-size-xxs);
+        padding: var(--spacing-em-md) var(--spacing-em-xs) var(--spacing-em-xs);
+        color: var(--color-background);
+        text-shadow: var(--text-shadow-xs);
+        // font-family: var(--font-family-mono);
+        background: linear-gradient(to bottom, transparent, var(--color-text-transparent));
+
+        >* {
+            font-family: var(--font-family-mono);
+            font-size: var(--font-size-em-xs);
+
+        }
+    }
+}

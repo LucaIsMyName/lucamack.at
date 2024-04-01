@@ -1,0 +1,40 @@
+/*
+@name: horizontal-scroll-container
+*/
+
+// .block.horizontal-scroll-container {
+//     height:100%;
+//     .container {
+//         .horizontal-scroll-item {
+//             flex: 0 0 100%;
+//             height:100%;
+//             // height: var(--horizontal-scroll-container--height, calc(100vh));
+//             // display: flex;
+//             // align-items: var(--horizontal-scroll-container--align, center);
+//             // justify-content: var(--horizontal-scroll-container--justify, center);
+
+//             >* {
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }
+
+.block.horizontal-scroll-container {
+    height: 100vh; // Ensuring the container fits the viewport height
+
+    >.container {
+        display: flex; // Ensuring flex layout
+        height: 100%;
+
+        .horizontal-scroll-item {
+            flex: 0 0 100vw; // Each item takes the full width of the viewport
+            height: calc(100vh - var(--header--height)); // Each item takes the full height of the viewport
+
+            >* {
+                width: 100%;
+                height: 100%; // Ensuring content fills the item
+            }
+        }
+    }
+}

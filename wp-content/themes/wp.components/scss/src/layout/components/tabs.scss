@@ -1,0 +1,63 @@
+/*
+@name: tabs
+*/
+
+
+
+.block.tabs {
+    --tabs--spacing: var(--spacing-sm);
+    --tabs--border: var(--px) solid var(--color-text);
+
+    .tabs-container {
+        border: var(--px) solid var(--color-text);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: var(--tabs--layout, column);
+    }
+
+    .tabs-header {
+        font-size: var(--tabs--size);
+        @include flex(row, 0, nowrap);
+        // flex-direction: var(--tabs--layout, column);
+        overflow-x: scroll;
+        justify-content: var(--tabs--align);
+        border-bottom: var(--tabs--border);
+        flex-basis: 100%;
+        width: 100%;
+
+        .tab {
+            @include flex(row, em-xs, nowrap);
+            align-items: center;
+        }
+
+        .tab-image {
+            font-size: var(--tabs--size);
+            width: 1em;
+            height: 1em;
+        }
+
+        button {
+            margin: 0;
+            padding-inline: var(--tabs--spacing);
+            padding-block: var(--tabs--spacing);
+            border: none;
+            border-radius: 0;
+            background-color: var(--tabs--background-color);
+            border-inline-end: var(--tabs--border);
+            font-size: var(--tabs--size);
+
+            .tab-text {
+                font-size: var(--tabs--size);
+            }
+        }
+    }
+
+    .tabs-content {
+        flex-basis: 100%;
+        width: 100%;
+        margin-block: var(--tabs--spacing);
+        padding-inline: var(--tabs--spacing);
+    }
+
+   
+}

@@ -1,0 +1,28 @@
+@mixin badge($color: 'background', $bg-color: 'text') {
+    color: var(--color-#{$color});
+    background-color: var(--color-#{$bg-color});
+    display: inline-block;
+    padding-inline: var(--spacing-em-xxs);
+    padding-block: var(--spacing-em-xxs);
+    border: var(--px) solid var(--color-#{$color});
+    margin-inline-end: var(--spacing-em-xxs);
+    margin-block-end: var(--spacing-em-xxs);
+    font-size: var(--font-size-xs);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+@mixin badge-brand {
+    @include badge('background', 'brand');
+}
+
+@mixin badge-dark {
+    @include badge('background', 'text');
+}
+
+@mixin badge-light {
+    @include badge('text', 'background');
+}
+
+@mixin badge-secondary {
+    @include badge('text', 'secondary');
+}

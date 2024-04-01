@@ -1,0 +1,91 @@
+/*
+@name: feed
+*/
+
+.block.feed {
+    // --feed--color: var(--color-text-transparent);
+    // --feed--bullet-size: var(--spacing-xs);
+
+    .feed-item {
+        @include flex(flex-start, sm);
+        justify-content: var(--feed--align, center);
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: var(--spacing-sm);
+        padding-inline-start: calc(var(--feed--bullet-size) + var(--spacing-sm));
+        position: relative;
+        padding-block-end: var(--spacing-sm) + 0.33em;
+        font-size: var(--feed--bullet-size);
+
+        &::before {
+            content: var(--feed--before-content, '');
+            position: absolute;
+            top: 0.33em;
+            // left: calc(var(--size-2) / 2);
+            left: 0;
+            width: var(--feed--bullet-size);
+            height: var(--feed--bullet-size);
+            background-color: var(--feed--color);
+            border-radius: var(--feed--bullet-radius);
+
+        }
+
+        &::after {
+            content: var(--feed--after-content, '');
+            position: absolute;
+            top: calc(0.33em + var(--feed--bullet-size));
+            width: 0;
+            border-inline: calc(var(--px) / 2) var(--feed--line-style) var(--feed--accent-color);
+            left: calc(var(--feed--bullet-size) / 2 - var(--px) / 2);
+            // background-color: var(--feed--accent-color);
+
+        }
+
+        &:not(:last-child)::after {
+            height: calc(100% - (0.33em + var(--feed--bullet-size)) + var(--spacing-sm) + 0.33em);
+        }
+
+        &:last-child::after {
+            height: calc(100% - (0.33em + var(--feed--bullet-size)));
+        }
+
+        &.no-bullets {
+            padding-inline-start: 0;
+
+            &::after,
+            &::before {
+                content: none;
+            }
+
+        }
+
+        .content {
+            // @media (min-width: map-get($map: $media-queries, $key: 'sm')) {
+            @include flex(row, sm);
+            flex-wrap: wrap;
+            // }
+        }
+
+        .text {
+            min-width: var(--size-xxs);
+            // max-width: calc(100% - var(--feed--image-size));
+            flex: 1 1 0%;
+        }
+
+        figure {
+            width: var(--feed--image-size);
+            flex-basis: var(--feed--image-size);
+            flex-shrink: 0;
+            flex-grow: 0;
+            height: auto;
+
+            img,
+            svg {
+                width: 100%;
+                height: auto;
+            }
+
+            // margin-bottom: var(--spacing-sm);
+        }
+    }
+}

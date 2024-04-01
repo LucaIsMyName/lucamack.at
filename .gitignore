@@ -1,0 +1,8 @@
+.sql
+wp-config.php
+wp-content/plugins/*
+wp-content/uploads/*
+wp-content/cache/*
+wp-content/webp-express/*
+wp-admin/*
+wp-includes/*

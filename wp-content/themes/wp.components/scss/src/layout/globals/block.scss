@@ -1,0 +1,21 @@
+/*
+@global: block
+*/
+
+.block {
+    background-color: var(--block--color-background, var(--color-background));
+    color: var(--block--color-text, var(--color-text));
+    display: block;
+    position: relative;
+    margin-block: var(--block--spacing-y, 0);
+}
+
+.block>.container {
+    display: block;
+    width: auto;
+    max-width: var(--block--max-width, 100%);
+    padding-inline: var(--block--spacing-x, 0);
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}

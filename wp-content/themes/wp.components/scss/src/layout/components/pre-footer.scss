@@ -1,0 +1,51 @@
+.pre-footer {
+  overflow: visible;
+
+  a {
+    fill: var(--color-brand);
+    color: var(--color-brand);
+    text-decoration: none;
+
+    &:is(:hover, :focus) svg {
+      fill: var(--color-text);
+      color: var(--color-text);
+    }
+  }
+
+  .container {
+    @media (min-width: map-get($map: $media-queries, $key: 'sm')) {
+      display: flex;
+      gap: var(--spacing-lg);
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    width: 100%;
+    overflow: visible;
+    position: relative;
+
+    .vr {
+      @media (max-width: map-get($map: $media-queries, $key: 'sm')) {
+        display: none;
+      }
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      height: 100%;
+    }
+
+    .column {
+      width: 100%;
+      flex: 1 1 0%;
+
+      svg {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        fill: currentColor;
+      }
+    }
+  }
+}

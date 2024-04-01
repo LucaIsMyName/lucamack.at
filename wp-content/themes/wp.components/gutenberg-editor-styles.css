@@ -1,0 +1,6 @@
+
+html :is(.wp-block) {
+    margin-bottom: 28px;
+    margin-top: 28px;
+    max-width: 100% !important;
+}

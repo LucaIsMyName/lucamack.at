@@ -1,0 +1,110 @@
+/*
+@name: buttons
+*/
+
+.block.buttons {
+    --buttons--shadow-color: var(--shadow-xs);
+    --buttons--font-weight: var(--font-weight-semi);
+
+    .container {
+        @include flex(row, 0, wrap);
+        justify-content: var(--buttons--justify);
+        gap: var(--buttons--spacing);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .button {
+        @include button();
+        font-size: var(--buttons--font-size);
+        width: var(--buttons--width, auto);
+        @include flex(row, xxs, nowrap);
+        align-items: center;
+        font-weight: var(--buttons--font-weight);
+        border-radius: var(--buttons--border-radius);
+        font-family: var(--buttons--font-family);
+        font-weight: var(--buttons--font-weight);
+
+        &:is(:hover) {
+            outline: var(--px) solid rgba(0, 0, 0, 0.25);
+            outline-offset: var(--px);
+
+            [color-theme="dark"] & {
+                outline: var(--px) solid rgba(255, 255, 255, 0.25);
+
+            }
+
+            svg {
+                transition: all 0.3s ease;
+                transform: scale(1.1);
+            }
+
+
+            [color-theme="dark"] & {
+                outline: var(--px) solid rgba(255, 255, 255, 0.25);
+            }
+        }
+
+        &:is(:focus) {
+            outline: var(--px) solid rgba(0, 0, 0, 0.25);
+            outline-offset: var(--px);
+
+            [color-theme="dark"] & {
+                outline: var(--px) solid rgba(255, 255, 255, 0.25);
+            }
+        }
+
+        &:has(:not(.text) + .image) {
+            padding-inline: var(--spacing-em-xs);
+        }
+
+        &:has(.text + .image) {
+            padding-inline-start: var(--spacing-em-xs);
+        }
+
+        &:has(:not(.image) + .text) {
+            padding-inline: var(--spacing-em-sm);
+        }
+
+        // &:has(:not(.text)) {
+        //     padding-inline: var(--spacing-em-sm) !important;
+        // }
+
+        .image {
+            width: 1em;
+            height: 1em;
+
+            img,
+            svg {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        &.primary {
+            @include button-color('background', 'brand', 'text');
+            border-width: var(--px);
+        }
+
+        &.secondary {
+            @include button-color('text', 'background', 'text');
+            border-width: var(--px);
+        }
+
+        &.default {
+            @include button-color('text', 'background', 'text');
+            border-width: var(--px);
+        }
+
+        &.disabled {
+            @include button-color('text-transparent', 'background', 'text-transparent');
+            border-width: var(--px);
+            pointer-events: none;
+            opacity: 0.66;
+            cursor: not-allowed;
+        }
+    }
+}
