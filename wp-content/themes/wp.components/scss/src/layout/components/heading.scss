@@ -15,7 +15,8 @@
 
         &.custom {
             font-size: var(--heading--font-size);
-
+            color: var(--heading--color-text, var(--color-text));
+            background-color: var(--heading--color-background, transparent);
         }
 
 

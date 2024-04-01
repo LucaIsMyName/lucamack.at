@@ -19,7 +19,7 @@
 
     ">
     <div class="[ container ]">
-        <figure title="">
+        <figure title="<?= esc_html($attributes['image']['title']); ?>">
 
             <?php
             // Extract the relative path from the full URL

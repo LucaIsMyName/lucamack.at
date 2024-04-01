@@ -1561,7 +1561,7 @@ input[type=search].search-input:focus {
 }
 
 .to-top-button {
-  background-color: var(--color-background-transparent);
+  background-color: var(--color-background) !important;
   backdrop-filter: blur(var(--header--blur));
   color: var(--color-text);
   transform: translateY(30px);
@@ -1576,6 +1576,7 @@ input[type=search].search-input:focus {
   pointer-events: all;
 }
 .to-top-button:is(:hover, :focus) {
+  background-color: var(--color-background-light) !important;
   opacity: 1;
   transform: translateY(0);
   pointer-events: all;
@@ -2309,7 +2310,7 @@ a:is(:hover, :focus) {
   width: auto;
   max-width: var(--block--max-width, 100%);
   padding-inline: var(--block--spacing-x, 0);
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
   z-index: 1;
   position: relative;
 }
@@ -2922,6 +2923,8 @@ a:is(:hover, :focus) {
 }
 .block.heading :is(h1, h2, h3, h4, h5, h6, p, small, code, pre, blockquote).custom {
   font-size: var(--heading--font-size);
+  color: var(--heading--color-text, var(--color-text));
+  background-color: var(--heading--color-background, transparent);
 }
 @media (min-width: 769px) {
   .block.heading :is(h1, h2, h3, h4, h5, h6, p, small, code, pre, blockquote) {

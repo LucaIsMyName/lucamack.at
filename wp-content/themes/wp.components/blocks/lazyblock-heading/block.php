@@ -14,6 +14,8 @@
     --heading--text-align: <?= $attributes['heading-text-align'] ?>;  
     --heading--text-align-sm: <?= $attributes['heading-text-align-sm'] ?>;  
     --heading--text-align-md: <?= $attributes['heading-text-align-md'] ?>;
+    --heading--color-text: var(--color-<?= $attributes['color'] ?>);
+    --heading--color-background: var(--color-<?= $attributes['background-color'] ?>);
     --heading--font-size:var(--font-size-<?= $attributes['headline-font-size'] ?>);
     --heading--font-family:var(--font-family-<?= $attributes['heading-font-family'] ?>);
     --heading--font-weight:var(--font-weight-<?= $attributes['heading-font-weight'] ?>);
