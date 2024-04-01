@@ -4042,9 +4042,12 @@ body[color-theme=dark]:has(#goldenes-quartier[data-viewport=true]) :is(h1, h2, h
   --duration: 1.2s;
 }
 :is(#first, #second, #third, #fourth)::before {
-  transition: width var(--duration) var(--timing-function);
+  transition: transform var(--duration) var(--timing-function), width var(--duration) var(--timing-function), opacity var(--duration) var(--timing-function);
   z-index: 1;
   width: 0;
+  transform: translateX(calc(var(--spacing-md) * -1));
+  opacity: 0;
+  will-change: width;
 }
 :is(#first, #second, #third, #fourth):not(::before) {
   z-index: 2;
@@ -4081,6 +4084,9 @@ body[color-theme=dark]:has(#goldenes-quartier[data-viewport=true]) :is(h1, h2, h
   outline-offset: var(--px);
 }
 
+:is(#first, #second, #third, #fourth)[data-viewport=true] {
+  transition: opacity var(--duration) var(--timing-function);
+}
 :is(#first, #second, #third, #fourth)[data-viewport=true] :is(h1, h2, h3, h4, h5, h6) {
   color: var(--color-background);
   text-stroke-color: transparent;
@@ -4090,6 +4096,8 @@ body[color-theme=dark]:has(#goldenes-quartier[data-viewport=true]) :is(h1, h2, h
   transition: all var(--duration) var(--timing-function);
 }
 :is(#first, #second, #third, #fourth)[data-viewport=true]::before {
+  opacity: 1;
+  transform: translateX(0);
   width: calc(100% - var(--spacing-sm) * 2);
   z-index: 0;
   filter: blur(0);

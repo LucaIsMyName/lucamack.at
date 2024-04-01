@@ -385,10 +385,14 @@ $projects in $project-color-schemes {
     --timing-function: ease;
     --duration: 1.2s;
 
+
     &::before {
-        transition: width var(--duration) var(--timing-function);
+        transition: transform var(--duration) var(--timing-function), width var(--duration) var(--timing-function), opacity var(--duration) var(--timing-function);
         z-index: 1;
         width: 0;
+        transform: translateX(calc(var(--spacing-md) * -1));
+        opacity: 0;
+        will-change: width;
     }
 
     &:not(::before) {
@@ -431,6 +435,9 @@ $projects in $project-color-schemes {
 }
 
 :is(#first, #second, #third, #fourth)[data-viewport="true"] {
+
+    transition: opacity var(--duration) var(--timing-function);
+
     :is(h1, h2, h3, h4, h5, h6) {
         color: var(--color-background);
         text-stroke-color: transparent;
@@ -441,6 +448,8 @@ $projects in $project-color-schemes {
     }
 
     &::before {
+        opacity: 1;
+        transform: translateX(0);
         width: calc(100% - var(--spacing-sm) * 2);
         z-index: 0;
         filter: blur(0);
