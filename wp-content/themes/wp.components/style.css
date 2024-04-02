@@ -2724,7 +2724,7 @@ a:is(:hover, :focus) {
 .block.description-list {
   --description-list--title-width: var(--size-xs);
   --description-list--title-margin: var(--spacing-md);
-  --description-list--border-color: var(--color-text);
+  --description-list--border-color: var(--color-background-dark);
 }
 .block.description-list .list {
   border-block-start: var(--px) solid var(--description-list--border-color);
