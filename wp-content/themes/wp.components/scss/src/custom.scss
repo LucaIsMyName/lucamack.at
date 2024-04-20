@@ -1087,16 +1087,3 @@ $projects in $project-color-schemes {
         }
     }
 }
-
-#about {
-    figure {
-        filter: saturate(66%);
-        scale: 1;
-        transition: scale 0.3s ease, filter 0.3s ease;
-
-        &:hover {
-            filter: saturate(100%);
-            scale: 1.1;
-        }
-    }
-}

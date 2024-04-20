@@ -1673,6 +1673,10 @@ input[type=search].search-input:focus {
   width: var(--font-size-sm);
 }
 
+#mobile-nav .actions button svg {
+  pointer-events: none;
+}
+
 #mobile-nav .lang-item a {
   height: var(--header--logo-size);
   width: var(--header--logo-size);
@@ -3291,6 +3295,7 @@ a:is(:hover, :focus) {
   background: rgba(0, 0, 0, 0.8) !important;
   opacity: 1 !important;
   backdrop-filter: blur(var(--spacing-sm)) !important;
+  -webkit-backdrop-filter: blur(var(--spacing-sm)) !important;
   z-index: 9999 !important;
 }
 
@@ -3307,25 +3312,28 @@ a:is(:hover, :focus) {
 .sl-wrapper :is(.sl-counter, .sl-close, .sl-close svg, .sl-navigation, .sl-spinner, .sl-next, .sl-next svg, .sl-prev, .sl-prev svg) {
   color: rgba(245, 245, 245, 0.9) !important;
   font-weight: 100 !important;
-  width: var(--font-size-md) !important;
-  height: var(--font-size-md) !important;
-  font-size: var(--font-size-md) !important;
+  width: var(--header--logo-size) !important;
+  height: var(--header--logo-size) !important;
+  font-size: var(--header--logo-size) !important;
   font-family: var(--font-family-display) !important;
+}
+.sl-wrapper .sl-counter {
+  left: var(--header--spacing) !important;
+  top: var(--header--spacing) !important;
+  font-size: var(--header--logo-size) !important;
 }
 .sl-wrapper .sl-close {
   display: none;
   position: fixed;
-  right: var(--header--spacing);
-  top: var(--header--spacing);
-  z-index: 10060;
-  margin-top: -14px;
-  margin-right: -14px;
-  height: var(--font-size-md);
-  width: var(--font-size-md);
-  line-height: var(--font-size-md);
+  right: var(--header--spacing) !important;
+  top: var(--header--spacing) !important;
+  height: var(--header--logo-size);
+  margin: 0 !important;
+  width: var(--header--logo-size);
+  line-height: var(--header--logo-size) !important;
   font-family: var(--font-family-display) !important;
   color: rgba(245, 245, 245, 0.9) !important;
-  font-size: var(--font-size-md);
+  font-size: var(--header--logo-size);
 }
 
 /*
@@ -4727,16 +4735,6 @@ body[color-theme=dark]:has(#goldenes-quartier[data-viewport=true]) :is(h1, h2, h
 #cv [data-marquee] .heading :is(h1, h2, h3, h4, h5, h6, p)::after {
   content: "}";
   animation-direction: reverse;
-}
-
-#about figure {
-  filter: saturate(66%);
-  scale: 1;
-  transition: scale 0.3s ease, filter 0.3s ease;
-}
-#about figure:hover {
-  filter: saturate(100%);
-  scale: 1.1;
 }
 
 /**

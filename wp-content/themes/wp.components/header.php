@@ -42,12 +42,11 @@ $blogUrl = esc_url(home_url('/'));
     <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.7.0/two.min.js"></script>
 
     <!-- simple lightbox  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js"></script>
+    <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/js/simple-lightbox/simple-lightbox.min.css">
+    <script src="<?= get_template_directory_uri() ?>/js/simple-lightbox/simple-lightbox.min.js" defer></script>
 
-
+    <!-- custom scripts -->
     <script defer src="<?= get_template_directory_uri() ?>/js/viewport-transitions.min.js"></script>
-    <!-- <script defer src="<?= get_template_directory_uri() ?>/js/splash-screen.min.js"></script> -->
     <script defer src="<?= get_template_directory_uri() ?>/js/draw.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/accordion.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/tables.min.js"></script>
@@ -85,17 +84,10 @@ $blogUrl = esc_url(home_url('/'));
     <script defer src="<?= get_template_directory_uri() ?>/js/accessibility.min.js"></script> -->
 
     <!-- <script defer src="<?= get_template_directory_uri() ?>/js/accessibility.min.js"></script> -->
-    <!-- <script defer src="<?= get_template_directory_uri() ?>/js/horizontal-scroll.min.js"></script> -->
 
 </head>
 
 <body color-theme="light" id="body" <?php body_class(); ?> data-scroll-state>
-    <!-- <div data-splash-screen class="[ splash-screen ]">
-        <div class="[ container ]">
-            <div class="[ icon ]"></div>
-        </div>
-    </div> -->
-    <!--  <div class="loadingIcon"></div>-->
     <?php wp_body_open(); ?>
     <div id="wrapper" class="">
         <header class="[ header ]" role="banner">
@@ -155,8 +147,7 @@ $blogUrl = esc_url(home_url('/'));
             title="Main Mobile Navigation Open">
             <nav class="[  ]">
                 <section class="[ brand ]">
-                    <a
-                        href="<?= $blogUrl ?>" class="[ logo ]">
+                    <a href="<?= $blogUrl ?>" class="[ logo ]">
                         <img data-logo height="" class="" src="<?= get_custom_logo_url() ?>" alt="<?= $blogInfo ?>">
                     </a>
                     <!-- <form method="GET" action="/?" class="search-container">
@@ -171,9 +162,9 @@ $blogUrl = esc_url(home_url('/'));
                     <div class="actions">
                         <?php include 'actions-nav.php'; ?>
                         <button data-mobile-nav="close" class="[ close ]" title="Main Mobile Navigation Close">
-                            <svg class="" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-x">
+                            <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-x">
                                 <line x1="18" y1="6" x2="6" y2="18"></line>
                                 <line x1="6" y1="6" x2="18" y2="18"></line>
                             </svg>

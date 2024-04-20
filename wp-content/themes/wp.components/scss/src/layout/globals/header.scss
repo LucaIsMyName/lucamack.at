@@ -423,7 +423,15 @@ input[type="search"].search-input {
     width: var(--header--logo-size);
 }
 
-#mobile-nav {}
+#mobile-nav {
+    .actions {
+        button {
+            svg {
+                pointer-events: none;
+            }
+        }
+    }
+}
 
 #mobile-nav .lang-item a {
     // display: block;
