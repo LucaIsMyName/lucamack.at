@@ -10,6 +10,7 @@ function get_custom_logo_url()
 
 // Get Bloginfo as simple Var
 $blogInfo = esc_attr(get_bloginfo('name'));
+$blogDesc = esc_attr(get_bloginfo('description'));
 // Get Blog URL as simple Var
 $blogUrl = esc_url(home_url('/'));
 
@@ -20,7 +21,7 @@ $blogUrl = esc_url(home_url('/'));
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="<?= $blogInfo ?>: Initiativbewerbung von Luca Mack.">
+    <meta name="description" content="<?= $blogInfo . ' | ' . $blogDesc ?>">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
 
@@ -38,8 +39,16 @@ $blogUrl = esc_url(home_url('/'));
     <script defer src="<?= get_template_directory_uri() ?>/js/popper/popper.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/tippy/tippy.min.js"></script>
     <!-- tooltip libraries end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.7.0/two.min.js"></script>
 
-    <script defer src="<?= get_template_directory_uri() ?>/js/splash-screen.min.js"></script>
+    <!-- simple lightbox  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js"></script>
+
+
+    <script defer src="<?= get_template_directory_uri() ?>/js/viewport-transitions.min.js"></script>
+    <!-- <script defer src="<?= get_template_directory_uri() ?>/js/splash-screen.min.js"></script> -->
+    <script defer src="<?= get_template_directory_uri() ?>/js/draw.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/accordion.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/tables.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/viewport.min.js"></script>
@@ -60,6 +69,7 @@ $blogUrl = esc_url(home_url('/'));
     <script defer src="<?= get_template_directory_uri() ?>/js/nightshift.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/tippy.min.js" type="module"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/magnifier.min.js" type="module"></script>
+    <script defer src="<?= get_template_directory_uri() ?>/js/gallery.min.js" type="module"></script>
     <!-- <script defer src="<?= get_template_directory_uri() ?>/js/object-info.min.js"></script> -->
     <!-- <script>
         /**
@@ -80,11 +90,11 @@ $blogUrl = esc_url(home_url('/'));
 </head>
 
 <body color-theme="light" id="body" <?php body_class(); ?> data-scroll-state>
-    <div data-splash-screen class="[ splash-screen ]">
+    <!-- <div data-splash-screen class="[ splash-screen ]">
         <div class="[ container ]">
             <div class="[ icon ]"></div>
         </div>
-    </div>
+    </div> -->
     <!--  <div class="loadingIcon"></div>-->
     <?php wp_body_open(); ?>
     <div id="wrapper" class="">
@@ -161,7 +171,7 @@ $blogUrl = esc_url(home_url('/'));
                     <div class="actions">
                         <?php include 'actions-nav.php'; ?>
                         <button data-mobile-nav="close" class="[ close ]" title="Main Mobile Navigation Close">
-                            <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            <svg class="" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
                                 stroke-linejoin="round" class="feather feather-x">
                                 <line x1="18" y1="6" x2="6" y2="18"></line>

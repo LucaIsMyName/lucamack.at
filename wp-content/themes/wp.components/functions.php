@@ -236,6 +236,7 @@ $lazyblocks = array(
     'divider',
     'buttons',
     'sidebar',
+    'gallery',
     'info-panel',
     'modal',
     'link',

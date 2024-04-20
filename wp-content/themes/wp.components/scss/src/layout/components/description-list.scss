@@ -9,7 +9,6 @@
 
     .list {
         border-block-start: var(--px) solid var(--description-list--border-color);
-
     }
 
 
@@ -23,7 +22,6 @@
 
     .list-item {
         padding-block: calc(var(--description-list--title-margin) * 0.75);
-
         border-block-end: var(--px) solid var(--description-list--border-color);
 
         @media screen and (min-width: map-get($map: $media-queries, $key: 'xs')) {
@@ -43,7 +41,6 @@
 
         @media screen and (min-width: map-get($map: $media-queries, $key: 'xs')) {
             padding-block: 0;
-
         }
     }
 }

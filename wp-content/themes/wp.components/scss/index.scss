@@ -37,6 +37,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'src/layout/globals/footer.scss';
 @import 'src/layout/globals/main.scss';
 @import 'src/layout/globals/block.scss';
+@import 'src/layout/globals/viewport-transitions.scss';
 
 // import 'src/layout/components'
 @import 'src/layout/components/accordion.scss';
@@ -54,6 +55,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'src/layout/components/image.scss';
 @import 'src/layout/components/info-panel.scss';
 @import 'src/layout/components/sidebar.scss';
+@import 'src/layout/components/gallery.scss';
 @import 'src/layout/components/slideover.scss';
 @import 'src/layout/components/slider.scss';
 @import 'src/layout/components/tabs.scss';

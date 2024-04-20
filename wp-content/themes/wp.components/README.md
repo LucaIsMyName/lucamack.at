@@ -8,12 +8,16 @@
 
 **only the lazyblocks are styled and tested for the theme, all other gutenberg blocks should be deactivated (except wp `paragraph` block)**
 
-### styling
+## creating a new block
+
+
+
+## styling
 
 1. to change the sass-stylesheet: download and install `sass-lang` on your pc globally
 2. if you're working in the root folder of wordpress use this command line: `sass --watch wp-content/themes/components/scss/index.scss wp-content/themes/components/style.css`, if you're working in the theme folder use: `sass --watch scss/index.scss style.css`
 3. you're now able to adapt the root stylesheet for the theme
-4. all customizations for the specific website should be written inside the `src/custom.scss` file (it's rendered at the very end of the cascade and will overwrite existing rules)
+4. all customizations for the specific website should be written inside the `src/custom.scss` file (it's rendered at the very end of the cascade and will overwrite existing rules if specificity is high enough)
 
 `components.wp` provides a set of css-custom-properties to work with or overwrite during development.
 

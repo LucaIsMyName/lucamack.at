@@ -28,7 +28,7 @@
         </g>
         <g id="Component_-_Checkbox" data-name="Component - Checkbox" transform="translate(0 116.051)">
           <g id="Rectangle_10-3" data-name="Rectangle 10" fill="#fff" stroke="#595c6b" stroke-width="1.5">
-            <rect width="24" height="24" rx="1" stroke="none"/>
+            <rect  rx="1" stroke="none"/>
             <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="0.25" fill="none"/>
           </g>
           <text id="I_have_read_and_accept_the_Privacy_Policy_by_SIGNA_Informationstechnologie_GmbH" data-name="I have read and accept the Privacy Policy by SIGNA Informationstechnologie GmbH" transform="translate(40 2)" fill="#646777" font-size="16" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="16">I have read and accept the Privacy Policy by SIGNA </tspan><tspan x="0" y="38">Informationstechnologie GmbH</tspan></text>
@@ -36,7 +36,7 @@
         </g>
         <g id="Component_-_Checkbox-2" data-name="Component - Checkbox" transform="translate(0 169.051)">
           <g id="Rectangle_10-4" data-name="Rectangle 10" fill="#fff" stroke="#595c6b" stroke-width="1.5">
-            <rect width="24" height="24" rx="1" stroke="none"/>
+            <rect  rx="1" stroke="none"/>
             <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="0.25" fill="none"/>
           </g>
           <text id="Remember_Me" data-name="Remember Me" transform="translate(40 2)" fill="#646777" font-size="16" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="16">Remember Me</tspan></text>

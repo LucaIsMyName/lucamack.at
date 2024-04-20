@@ -96,7 +96,7 @@ $playerId = rand(1000, 9999);
 
                     </button>
                     <button class="[ button button-play-pause ]" data-audioplayer-control="play-pause">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M5.25 5.65297C5.25 4.79729 6.1674 4.25486 6.91716 4.66723L18.4577 11.0145C19.2349 11.442 19.2349 12.5586 18.4577 12.986L6.91716 19.3334C6.1674 19.7457 5.25 19.2033 5.25 18.3476V5.65297Z"
                                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -104,7 +104,7 @@ $playerId = rand(1000, 9999);
                         </svg>
                     </button>
                     <button class="[ button button-next ]" data-audioplayer-control="next">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3 8.68819C3 7.82439 3.93317 7.28285 4.68316 7.71141L11.7906 11.7728C12.5464 12.2047 12.5464 13.2945 11.7906 13.7264L4.68316 17.7878C3.93317 18.2164 3 17.6748 3 16.811V8.68819Z"
                                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -118,7 +118,7 @@ $playerId = rand(1000, 9999);
                     </button>
                     <!-- <input data-audioplayer-volume type="range" min="0" max="100" /> -->
                     <!-- <button class="[ button button-mute-unmute ]" data-audioplayer-control="mute-unmute">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M17.25 9.75041L19.5 12.0004M19.5 12.0004L21.75 14.2504M19.5 12.0004L21.75 9.75041M19.5 12.0004L17.25 14.2504M6.75 8.25041L11.4697 3.53074C11.9421 3.05827 12.75 3.3929 12.75 4.06107V19.9398C12.75 20.6079 11.9421 20.9426 11.4697 20.4701L6.75 15.7504H4.50905C3.62971 15.7504 2.8059 15.2439 2.57237 14.3962C2.36224 13.6334 2.25 12.83 2.25 12.0004C2.25 11.1708 2.36224 10.3675 2.57237 9.60465C2.8059 8.75689 3.62971 8.25041 4.50905 8.25041H6.75Z"
                                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -138,7 +138,7 @@ $playerId = rand(1000, 9999);
                             class="[ track ]">
                             <div class="[ left ]">
                                 <section>
-                                    <img width="24" height="24" data-audioplayer-track="cover"
+                                    <img  data-audioplayer-track="cover"
                                         src="<?= esc_url($track['cover']['url']) ?>" />
                                 </section>
                                 <!-- Image Tag inside the Repeat so that i can set a cover for each song instead the whole playlist (fallback?) -->
