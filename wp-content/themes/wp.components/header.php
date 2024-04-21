@@ -47,7 +47,6 @@ $blogUrl = esc_url(home_url('/'));
 
     <!-- custom scripts -->
     <script defer src="<?= get_template_directory_uri() ?>/js/viewport-transitions.min.js"></script>
-    <script defer src="<?= get_template_directory_uri() ?>/js/draw.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/accordion.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/tables.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/viewport.min.js"></script>
