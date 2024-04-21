@@ -2202,6 +2202,10 @@ code,
 WYSIWIG Editor Custom Styles 
 note: if the Text Content can be formatted by the Editor, the HTML Element should get the the 'data-wysiwyg' attribute to apply basic formating to the element
 */
+:where([data-wysiwyg]) a {
+  color: var(--color-brand) !important;
+}
+
 :where([data-wysiwyg]) :where(h1, h2, h3, h4, h5, h6, p, small, pre, ul, ol, li) {
   margin-block-start: var(--spacing-em-xs, 0.25em);
   margin-block-end: var(--spacing-em-sm, 0.33em);
@@ -2302,8 +2306,7 @@ a:is(:hover, :focus) {
 @global: block
 */
 .block {
-  background-color: var(--block--color-background, var(--color-background));
-  color: var(--block--color-text, var(--color-text));
+  color: var(--block--color-text, var(--color-text, currentColor));
   display: block;
   position: relative;
   margin-block: var(--block--spacing-y, 0);
@@ -3414,6 +3417,10 @@ a:is(:hover, :focus) {
 /*
 @name: text
 */
+.block.text * {
+  color: var(--block--color-text, var(--color-text, currentColor));
+}
+
 /*
 @name: modal
 */
@@ -3591,6 +3598,44 @@ body:has([data-modal-active=true]) :is(.header, .footer) {
   top: 0;
   left: 0;
   z-index: 1000;
+}
+
+.grid-container > .container {
+  display: grid;
+  grid-template-columns: var(--grid-container--columns, repeat(auto, 1fr));
+  grid-template-rows: var(--grid-container--rows, repeat(auto, 1fr));
+  gap: var(--grid-container--gap);
+}
+
+.grid-item {
+  grid-column-start: var(--grid-item--column-start);
+  grid-column-end: var(--grid-item--column-end);
+  grid-row-start: var(--grid-item--row-start);
+  grid-row-end: var(--grid-item--row-end);
+}
+@media (min-width: 769px) {
+  .grid-item {
+    grid-column-start: var(--grid-item--column-start--sm, var(--grid-item--column-start));
+    grid-column-end: var(--grid-item--column-end--sm, var(--grid-item--column-end));
+    grid-row-start: var(--grid-item--row-start--sm, var(--grid-item--row-start));
+    grid-row-end: var(--grid-item--row-end--sm, var(--grid-item--row-end));
+  }
+}
+@media (min-width: 960px) {
+  .grid-item {
+    grid-column-start: var(--grid-item--column-start--md, var(--grid-item--column-start--sm));
+    grid-column-end: var(--grid-item--column-end--md, var(--grid-item--column-end--sm));
+    grid-row-start: var(--grid-item--row-start--md, var(--grid-item--row-start--sm));
+    grid-row-end: var(--grid-item--row-end--md, var(--grid-item--row-end--sm));
+  }
+}
+@media (min-width: 1240px) {
+  .grid-item {
+    grid-column-start: var(--grid-item--column-start--lg, var(--grid-item--column-start--md));
+    grid-column-end: var(--grid-item--column-end--lg, var(--grid-item--column-end--md));
+    grid-row-start: var(--grid-item--row-start--lg, var(--grid-item--row-start--md));
+    grid-row-end: var(--grid-item--row-end--lg, var(--grid-item--row-end--md));
+  }
 }
 
 /*

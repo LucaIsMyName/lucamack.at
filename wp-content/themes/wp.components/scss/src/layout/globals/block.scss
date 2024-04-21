@@ -3,8 +3,9 @@
 */
 
 .block {
-    background-color: var(--block--color-background, var(--color-background));
-    color: var(--block--color-text, var(--color-text));
+    // background-color: var(--block--color-background, var(--color-background));
+    color: var(--block--color-text, var(--color-text, currentColor));
+    // color: currentColor;
     display: block;
     position: relative;
     margin-block: var(--block--spacing-y, 0);

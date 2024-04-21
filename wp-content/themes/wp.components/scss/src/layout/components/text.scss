@@ -3,5 +3,7 @@
 */
 
 .block.text {
-
+  * {
+    color: var(--block--color-text, var(--color-text, currentColor));
+  }
 }

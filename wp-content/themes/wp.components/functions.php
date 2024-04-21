@@ -232,6 +232,8 @@ $lazyblocks = array(
     'heading',
     'horizontal-scroll-container',
     'horizontal-scroll-item',
+    'grid-container',
+    'grid-item',
     'table-of-contents',
     'divider',
     'buttons',

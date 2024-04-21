@@ -1,0 +1,8 @@
+.grid-container {
+  >.container {
+    display: grid;
+    grid-template-columns: var(--grid-container--columns, repeat(auto, 1fr));
+    grid-template-rows: var(--grid-container--rows, repeat(auto, 1fr));
+    gap: var(--grid-container--gap);
+  }
+}

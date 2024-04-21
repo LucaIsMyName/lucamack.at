@@ -13,7 +13,7 @@ const allGalleries = document.querySelectorAll('[data-gallery]');
 allGalleries.forEach(container => {
   if (container.dataset.galleryHasLightbox === 'true') {
     // Find the links within this specific gallery container
-    const links = container.querySelectorAll('a');
+    const links = container.querySelectorAll('a[data-gallery-item]');
 
     // Initialize SimpleLightbox for this gallery container
     const lightbox = new SimpleLightbox(links, {

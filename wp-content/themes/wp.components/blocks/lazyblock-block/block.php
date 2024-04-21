@@ -53,7 +53,7 @@
     --block--gradient: none;
     <?php endif; ?>
     " data-viewport <?php if ($attributes['viewport-offset'] != ''): ?>data-viewport-offset="<?= $attributes['viewport-offset'] ?>" <?php endif; ?>>
-    <div class="[ container ]" <?php if ($attributes['wysiwyg']): ?>data-wysiwyg<?php endif; ?>>
+    <div class="[ container ]" <?php if($attributes['lightbox']) : ?>data-gallery data-gallery-has-lightbox="true"<? endif; ?> <?php if ($attributes['wysiwyg']): ?>data-wysiwyg<?php endif; ?>>
 
         <?php if ($attributes['enable-parallax']): ?>
             <div class="[ parallax parallax-<?= $attributes['parallax-speed']; ?> ]">

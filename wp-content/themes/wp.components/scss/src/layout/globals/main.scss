@@ -230,7 +230,11 @@ WYSIWIG Editor Custom Styles
 note: if the Text Content can be formatted by the Editor, the HTML Element should get the the 'data-wysiwyg' attribute to apply basic formating to the element
 */
 :where([data-wysiwyg]) {
+
     // word-break: break-all;
+    a {
+        color: var(--color-brand) !important;
+    }
 }
 
 :where([data-wysiwyg]) {
