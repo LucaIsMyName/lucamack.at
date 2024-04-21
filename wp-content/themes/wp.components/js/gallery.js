@@ -3,11 +3,6 @@
  */
 
 
-// Each data-gallery has one or more data-gallery-item children.
-// if data-gallery-has-lightbox is present, the gallery should open a lightbox when clicked.
-// if data-gallery-has-lightbox is not present, the gallery should navigate to the URL in the href attribute of the clicked item.
-// The lightbox should contain the clicked item and allow navigation between items in the gallery.
-// The lightbox should close when the user clicks outside of the lightbox or on the close button.
 const allGalleries = document.querySelectorAll('[data-gallery]');
 
 allGalleries.forEach(container => {
