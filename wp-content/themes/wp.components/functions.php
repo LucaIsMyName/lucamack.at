@@ -223,6 +223,7 @@ add_action('init', 'df_disable_comments_admin_bar');
 $lazyblocks = array(
     'blueprint',
     'text',
+    'post-types',
     'block',
     'image',
     'card',

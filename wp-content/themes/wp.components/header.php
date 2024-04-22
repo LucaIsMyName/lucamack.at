@@ -68,6 +68,7 @@ $blogUrl = esc_url(home_url('/'));
     <script defer src="<?= get_template_directory_uri() ?>/js/tippy.min.js" type="module"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/magnifier.min.js" type="module"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/gallery.min.js" type="module"></script>
+    <script defer src="<?= get_template_directory_uri() ?>/js/post-types.js" type="module"></script>
     <!-- <script defer src="<?= get_template_directory_uri() ?>/js/object-info.min.js"></script> -->
     <!-- <script>
         /**
