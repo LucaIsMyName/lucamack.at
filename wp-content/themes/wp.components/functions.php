@@ -330,3 +330,35 @@ function getIcon($icon = "arrow-up")
     var_dump($getIcon);
     return $getIcon;
 }
+
+// CPT's
+
+
+// AJAX Handler
+function load_custom_posts() {
+  $args = array(
+      'post_type' => 'posts',
+      'posts_per_page' => -1,
+      // Add any additional query arguments as needed
+  );
+
+  $posts = new WP_Query($args);
+
+  $response = array();
+
+  if ($posts->have_posts()) {
+      while ($posts->have_posts()) {
+          $posts->the_post();
+          $response[] = array(
+              'title' => get_the_title(),
+              'content' => get_the_content(),
+              // Add any other post data you want to retrieve
+          );
+      }
+      wp_reset_postdata();
+  }
+
+  wp_send_json($response);
+}
+add_action('wp_ajax_load_custom_posts', 'load_custom_posts');
+add_action('wp_ajax_nopriv_load_custom_posts', 'load_custom_posts');
