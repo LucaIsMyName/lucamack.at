@@ -3181,12 +3181,12 @@ a:is(:hover, :focus) {
   .block.sidebar > .container > .sidebar-container {
     flex: 1 1 0%;
     width: 100%;
-    max-width: clamp(var(--sidebar--width-sm) * 0.25, 20vw, var(--sidebar--width-sm) * 0.5);
+    max-width: clamp(var(--sidebar--width-sm) * 0.25, 33vw, var(--sidebar--width-sm) * 0.4);
   }
 }
 @media (min-width: 769px) {
   .block.sidebar > .container > .content {
-    width: calc(100% - clamp(var(--sidebar--width-sm) * 0.25, 20vw, var(--sidebar--width-sm) * 0.5));
+    width: calc(100% - clamp(var(--sidebar--width-sm) * 0.25, 33vw, var(--sidebar--width-sm) * 0.4));
   }
 }
 

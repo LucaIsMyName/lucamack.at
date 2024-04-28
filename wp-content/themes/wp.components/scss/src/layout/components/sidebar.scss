@@ -71,13 +71,13 @@
             @media (min-width: map-get($map: $media-queries, $key: 'sm')) {
                 flex: 1 1 0%;
                 width: 100%;
-                max-width: clamp(calc(var(--sidebar--width-sm) * 0.25), 20vw, calc(var(--sidebar--width-sm) * 0.5));
+                max-width: clamp(calc(var(--sidebar--width-sm) * 0.25), 33vw, calc(var(--sidebar--width-sm) * 0.4));
             }
         }
 
         @media (min-width: map-get($map: $media-queries, $key: 'sm')) {
             >.content {
-                width: calc(100% - clamp(var(--sidebar--width-sm) * 0.25, 20vw, var(--sidebar--width-sm) * 0.5)) // flex: 1 1 0%;
+                width: calc(100% - clamp(var(--sidebar--width-sm) * 0.25, 33vw, var(--sidebar--width-sm) * 0.4)) // flex: 1 1 0%;
                     // max-width: calc(100% - clamp(calc(var(--sidebar--width-sm) * 0.75), 20vw, calc(var(--sidebar--width-sm) * 1.25)));
             }
         }
