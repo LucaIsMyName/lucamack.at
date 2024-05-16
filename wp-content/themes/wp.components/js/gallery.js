@@ -49,7 +49,7 @@ allGalleries.forEach(container => {
       scaleFactor: 1.0, // Set image scale factor
       disableHash: false, // Disable hash navigation
       urlAttribute: 'href', // Set the attribute to use for image URLs
-      filter: null, // Set filter selector for images
+      filter: null, // Set filter selector for images 
       elements: null, // Set custom elements for lightbox
       domStructure: null, // Set custom DOM structure
       spinner: true, // Show spinner while loading images
