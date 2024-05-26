@@ -8,11 +8,23 @@
     color: inherit;
   }
 
+  [data-post-type] {
+    a>* {
+      &:not(::nth-child(last-child)) {
+        margin-bottom: var(--spacing-sm);
+      }
+    }
+
+    figure {
+      margin-bottom: var(--spacing-sm);
+    }
+  }
+
 
 
 
   // Layouts
-  &.layout{
+  &.layout {
     &-small {}
   }
 }
