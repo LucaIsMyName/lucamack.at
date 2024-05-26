@@ -240,6 +240,8 @@ $lazyblocks = array(
     'buttons',
     'sidebar',
     'gallery',
+    'vertical-row',
+    'teaser',
     'info-panel',
     'modal',
     'link',

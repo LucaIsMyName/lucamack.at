@@ -22,10 +22,13 @@
             ?>
             <li data-post-type="<?= $post_type ?>">
               <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-                <figure class="image" title="<?php the_title(); ?>">
-                  <?php the_post_thumbnail(); ?>
-                </figure>
-                <h2><?php the_title(); ?></h2>
+                <?php if ($attributes['has-excerpt']): ?>
+
+                  <figure class="image" title="<?php the_title(); ?>">
+                    <?php the_post_thumbnail(); ?>
+                  </figure>
+                <?php endif; ?>
+                <h2 class="<?= $attributes['headline-size'] ?>"><?php the_title(); ?></h2>
                 <?php if ($attributes['has-date'] | $attributes['has-author']): ?>
                   <section class="meta">
                     <small> <?php if ($attributes['has-date']) {
@@ -41,9 +44,12 @@
                     </small>
                   </section>
                 <?php endif; ?>
-                <section class="excerpt">
-                  <p><?php the_excerpt(); ?></p>
-                </section>
+                <?php if ($attributes['has-excerpt']): ?>
+                  <section class="excerpt">
+                    <p><?php the_excerpt(); ?></p>
+                  </section>
+                <?php endif; ?>
+
               </a>
               <!-- You can display other post information here -->
             </li>

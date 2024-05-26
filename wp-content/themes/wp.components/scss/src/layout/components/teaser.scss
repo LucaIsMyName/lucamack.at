@@ -1,0 +1,29 @@
+/*
+teaser
+*/
+
+.block.teasers {
+  &.square-fluid {
+    --teaser--aspect-ratio: 1;
+
+    &>.container {
+      padding-block: 0;
+      padding-inline: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .image {
+      border: var(--px) solid var(--color-background-dark);
+      overflow: hidden;
+      position: relative;
+      border-radius: var(--radius-sm);
+    }
+
+    .item {
+      flex: 1 1 calc(100% / var(--teaser--aspect-ratio));
+      padding-block: 0;
+      padding-inline: 0;
+    }
+  }
+}

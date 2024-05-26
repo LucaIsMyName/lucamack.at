@@ -1,0 +1,18 @@
+.block.vertical-row {
+  max-width: calc(var(--px) + var(--block--spacing-x) * 2) !important;
+  flex: 0 0 var(--px) !important;
+  min-width: calc(var(--px) + var(--block--spacing-x) * 2) !important;
+
+  // height: 100%;
+  @media screen and (max-width: map-get($map: $media-queries, $key: 'md')) {
+    display: none;
+  }
+
+  >.container {
+    width: var(--px);
+    height: 100%;
+    background-color: var(--color-background-dark);
+    padding: 0;
+    margin: 0 var(--block--spacing-x);
+  }
+}
