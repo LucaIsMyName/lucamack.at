@@ -2,7 +2,7 @@
 teaser
 */
 
-.block.teasers {
+.block.teaser {
   &.square-fluid {
     --teaser--aspect-ratio: 1;
 
@@ -11,13 +11,6 @@ teaser
       padding-inline: 0;
       display: flex;
       flex-wrap: wrap;
-    }
-
-    .image {
-      border: var(--px) solid var(--color-background-dark);
-      overflow: hidden;
-      position: relative;
-      border-radius: var(--radius-sm);
     }
 
     .item {

@@ -88,7 +88,6 @@ this part contains te custom overwrites for the specific website design or inter
 
         figure {
             filter: blur(20px);
-            will-change: filter, transform;
             transform: scale(1.025);
 
             @media screen and (min-width: map-get($map: $media-queries, $key: "xs")) {
@@ -292,20 +291,20 @@ $projects in $project-color-schemes {
         body[color-theme="#{$color-scheme}"]:has(#{"#" + $project-name}[data-viewport="true"]) {
             transition: background-color 0.3s ease;
 
-            @if $color-scheme =="dark" {
-                &::before {
-                    content: "";
-                    position: fixed;
-                    inset: 0;
-                    background-size: cover;
-                    animation: moveBgGradient;
-                    animation-duration: 3s;
-                    background: radial-gradient(rgba(0, 0, 0, 0.2), transparent),
-                        linear-gradient(45deg, transparent, rgba(0, 0, 0, 0.2)),
-                        linear-gradient(-45deg, transparent, rgba(0, 0, 0, 0.2));
-                    transition: background 0.3s ease;
-                }
-            }
+            // @if $color-scheme =="dark" {
+            //     &::before {
+            //         content: "";
+            //         position: fixed;
+            //         inset: 0;
+            //         background-size: cover;
+            //         animation: moveBgGradient;
+            //         animation-duration: 3s;
+            //         background: radial-gradient(rgba(0, 0, 0, 0.2), transparent),
+            //             linear-gradient(45deg, transparent, rgba(0, 0, 0, 0.2)),
+            //             linear-gradient(-45deg, transparent, rgba(0, 0, 0, 0.2));
+            //         transition: background 0.3s ease;
+            //     }
+            // }
 
             @each $color-name,
             $color-value in $project-colors {
@@ -602,8 +601,6 @@ $projects in $project-color-schemes {
         .container::before {
             background-image: url(icons/hero-icons/paint-brush.svg);
             animation-name: swipe;
-            will-change: translate;
-
         }
     }
 }
@@ -613,7 +610,6 @@ $projects in $project-color-schemes {
         .container::before {
             background-image: url(icons/hero-icons/sparkles.svg);
             animation-name: sparkle;
-            will-change: translate;
         }
     }
 }
@@ -623,7 +619,6 @@ $projects in $project-color-schemes {
         .container::before {
             background-image: url(icons/hero-icons/cursor-arrow-rays.svg);
             animation-name: double-click;
-            will-change: scale;
         }
     }
 }
@@ -633,12 +628,10 @@ $projects in $project-color-schemes {
 :is([data-scroll-state="top"], [data-scroll-state="bottom"], [data-scroll-state="up"]) .header {
     transform: translateY(0);
     transition: transform 0.3s ease;
-    will-change: auto;
     transition-delay: 0.3s;
 }
 
 [data-scroll-state="down"] .header {
-    will-change: auto;
     transform: translateY(calc((var(--header--height) + var(--px)) * -2));
     transition: transform 0.6s ease-in;
     transition-delay: 0.3s;
@@ -724,7 +717,6 @@ $projects in $project-color-schemes {
                 animation-name: shake;
                 animation-iteration-count: infinite;
                 animation-duration: 5s;
-                will-change: contents;
 
                 [color-theme="dark"] {
                     .image img {
@@ -805,7 +797,7 @@ $projects in $project-color-schemes {
             .item {
                 animation: fadeY;
                 animation-iteration-count: 1;
-                will-change: auto;
+
                 --animation-timing-function: ease-out;
                 --animation-base-time: 8s;
 
@@ -1093,116 +1085,5 @@ $projects in $project-color-schemes {
                 }
             }
         }
-    }
-}
-
-@keyframes homeAnimation {
-    0% {
-        background-position-x: 0%;
-        background-position-y: 0%;
-        scale: 1;
-    }
-
-    25% {
-        background-position-x: 100%;
-        background-position-y: 0%;
-    }
-
-    33% {
-        background-position-x: 33%;
-        background-position-y: 66%;
-    }
-
-    50% {
-        background-position-x: 100%;
-        background-position-y: 100%;
-        scale: 1.5;
-
-    }
-
-    66% {
-        background-position-x: 75%;
-        background-position-y: 25%;
-    }
-
-    75% {
-        background-position-x: 0%;
-        background-position-y: 100%;
-    }
-
-    100% {
-        background-position-x: 0%;
-        background-position-y: 0%;
-        scale: 1;
-    }
-}
-
-#home {
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-
-        [data-scroll-state-scrolled="0"] &,
-        [data-scroll-state="bottom"] & {
-            opacity: 1;
-            transform: scale(1);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-
-        }
-
-        :not([data-scroll-state-scrolled="0"]) &,
-        :not([data-scroll-state="bottom"]) & {
-            transition: opacity 0.6s ease, transform 0.6s ease;
-
-        }
-
-        transform: scale(1.5);
-        opacity:0;
-        transition: opacity 0.6s ease,
-        transform 0.6s ease;
-        content: '';
-        position: absolute;
-        pointer-events: none;
-
-        [data-scroll-state="bottom"] & {
-            position: fixed;
-            transition: opacity 0.6s ease,
-        transform 0.6s ease;
-        }
-
-        z-index: 0;
-        inset: 0;
-        background: rgb(153, 61, 245);
-        background: radial-gradient(circle,
-            rgba(128, 0, 255, 0.3) 0%,
-            rgba(255, 0, 144, 0.25) 35%,
-            rgba(0, 212, 255, 0.4) 100%);
-        background-size: 200% 200%;
-        animation-name: homeAnimation;
-        animation-duration: 14s;
-        animation-iteration-count: infinite;
-        animation-timing-function:ease-in-out;
-    }
-
-    &::after {
-        [data-scroll-state="bottom"] & {
-            display: none !important;
-        }
-
-        background-blend-mode: multiply;
-        filter: hue-rotate(10deg);
-        background: linear-gradient(var(--color-background), hsl(var(--hsl-blue),
-                var(--hsl-greyscale),
-                var(--hsl-brightness),
-                0.2), hsl(var(--hsl-red),
-                var(--hsl-greyscale),
-                var(--hsl-brightness),
-                0.2), var(--color-background));
-        content: '';
-        position: absolute;
-        inset: 0;
-        transition: background 0.6s ease;
-        // background: linear-gradient(var(--color-background));
     }
 }

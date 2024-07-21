@@ -5,30 +5,53 @@ async function switchView(data) {
     return;
   }
 
+  // Start the view transition
   const transition = document.startViewTransition(async () => {
     await updateTheDOM(data);
   });
 
-  animateFromMiddle(transition);
+  // Animate after the view transition starts
+  await animateFromMiddle(transition);
 
-  await transition.updateCallbackDone;
+  // Wait for the view transition to complete
+  await transition.ready;
 }
 
 async function animateFromMiddle(transition) {
   try {
+    // Wait for the view transition to be ready
     await transition.ready;
 
+    // Apply an animation to the document element
     document.documentElement.animate(
       {
-        clipPath: [`inset(50%)`, `inset(0)`],
+        transform: ['scale(1)', 'scale(1.2)'], // Example animation
       },
       {
         duration: 500,
-        easing: 'ease-in',
-        pseudoElement: '::view-transition-new(root)',
+        easing: 'ease-in-out',
       }
     );
   } catch (err) {
-    // You might want to log this error, but it shouldn't break the app
+    console.error('Animation error:', err);
   }
+}
+
+async function updateTheDOM(data) {
+  // Example: Update the content of an element with ID 'content'
+  const contentElement = document.getElementById('content');
+
+  // Check if the element exists
+  if (!contentElement) {
+    console.warn('Content element not found');
+    return;
+  }
+
+  // Simulate a delay to show the async nature of the operation
+  await new Promise(resolve => setTimeout(resolve, 100)); // Simulated delay for demo purposes
+
+  // Update the content of the element
+  contentElement.innerHTML = data;
+
+  // Optionally, you can handle additional updates or animations here
 }

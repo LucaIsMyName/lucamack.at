@@ -6,7 +6,7 @@
     >.container {
         @include flex(row, 0, wrap);
         gap: var(--columns-fluid--gap);
-        align-items: var(--columns-fluid--align, normal);
+        align-items: var(--columns-fluid--align, flex-start);
 
         >.block {
             flex-grow: 1;

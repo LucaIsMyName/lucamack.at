@@ -305,7 +305,7 @@ input[type="search"].search-input {
 }
 
 .to-top-button {
-    // background-color: var(--color-background) !important;
+    background-color: var(--color-background) !important;
     backdrop-filter: blur(var(--header--blur));
     color: var(--color-text);
     transform: translateY(30px);
@@ -322,7 +322,7 @@ input[type="search"].search-input {
     }
 
     &:is(:hover, :focus) {
-        // background-color: var(--color-background-light) !important;
+        background-color: var(--color-background-light) !important;
         opacity: 1;
         transform: translateY(0);
         pointer-events: all;

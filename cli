@@ -1,1 +1,1 @@
-sass --watch wp-content/themes/components/scss/index.scss wp-content/themes/components/style.css
+sass --watch wp-content/themes/wp.components/scss/index.scss wp-content/themes/wp.components/style.css
