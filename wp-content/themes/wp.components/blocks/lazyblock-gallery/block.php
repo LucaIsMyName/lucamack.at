@@ -20,7 +20,7 @@
       class="gallery-container">
       <?php $i = 1; ?>
       <?php foreach ($attributes['images'] as $image): ?>
-        <a href="<?= esc_url($image['image']['url']) ?>" title="<?= $image['title'] ?>" class="gallery-item"
+        <a href="<?= esc_url($image['image']['url']) ?>" title="<?= $image['image']['alt'] ?>" class="gallery-item"
           data-gallery-item="<?= $i ?>">
           <figure>
             <img src="<?= esc_url($image['image']['url']) ?>" alt="<?= $image['image']['alt'] ?>" />
