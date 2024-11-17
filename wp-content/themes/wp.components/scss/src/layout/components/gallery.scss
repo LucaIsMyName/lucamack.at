@@ -1,8 +1,21 @@
 .gallery {
+  position: relative;
   [data-gallery-has-lightbox="false"] {
     a {
       pointer-events: none;
     }
+  }
+
+  &-item-description {
+    font-size: var(--font-size-sm);
+    font-weight: 100;
+    color: var(--color-text);
+    margin-top: var(--spacing-xs);
+    position: absolute;
+    bottom: var(--spacing-xs);
+    left: var(--spacing-xs);
+    right: var(--spacing-xs);
+    text-shadow: 0.075em 0.075em 0 var(--color-background), 0.075em -0.075em 0 var(--color-background), -0.075em 0.075em 0 var(--color-background), -0.075em -0.075em 0 var(--color-background), 0 0 0.5em var(--color-background);
   }
 
   &.animate[data-viewport="false"] {
@@ -10,20 +23,19 @@
       filter: blur(var(--spacing-sm));
       transition: filter 0.9s ease-in;
 
-      &:nth-child(3n+3) {
+      &:nth-child(3n + 3) {
         transition: filter 0.6s ease-out;
       }
 
       // every 3rd item starting from the 2nd
-      &:nth-child(3n+2) {
+      &:nth-child(3n + 2) {
         transition: filter 0.75s ease-in-out;
       }
 
       // every 4rd item starting from the 1st
-      &:nth-child(4n+1) {
+      &:nth-child(4n + 1) {
         transition: filter 1s ease-in-out;
       }
-
     }
   }
 
@@ -33,12 +45,12 @@
       transition: filter 0.9s ease-in;
 
       // every 3rd item starting from the 3rd
-      &:nth-child(3n+3) {
+      &:nth-child(3n + 3) {
         transition: filter 0.6s ease-out;
       }
 
       // every 3rd item starting from the 2nd
-      &:nth-child(3n+2) {
+      &:nth-child(3n + 2) {
         transition: filter 0.4s ease-in-out;
       }
     }
@@ -68,7 +80,6 @@
     cursor: pointer;
   }
 
-
   &.square-grid {
     .gallery-container {
       display: grid;
@@ -90,7 +101,7 @@
 
   &.masonry {
     .gallery-container {
-      @media (max-width: map-get($map: $media-queries, $key: 'sm')) {
+      @media (max-width: map-get($map: $media-queries, $key: "sm")) {
         flex-direction: column;
       }
 
@@ -104,12 +115,12 @@
         flex: 1 1 0%;
         max-width: var(--size-xs);
 
-        @media (max-width: map-get($map: $media-queries, $key: 'sm')) {
+        @media (max-width: map-get($map: $media-queries, $key: "sm")) {
           max-width: 100%;
           width: 100%;
         }
 
-        @media (min-width: map-get($map: $media-queries, $key: 'sm')) {
+        @media (min-width: map-get($map: $media-queries, $key: "sm")) {
           min-width: var(--gallery-item-min-width, 240px);
         }
       }

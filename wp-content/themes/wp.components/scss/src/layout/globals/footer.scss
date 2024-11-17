@@ -25,6 +25,10 @@
         padding-bottom: 0;
     }
 
+    li a {
+        text-wrap: nowrap;
+    }
+
     @media screen and (min-width: map-get($map: $media-queries, $key: 'md')) {
         >* {
             flex: 1 1 0%;

@@ -12,6 +12,10 @@
         gap: var(--buttons--spacing);
     }
 
+    .text {
+        transform: translateY(-0.1em);
+    }
+
     a {
         text-decoration: none;
     }
@@ -96,6 +100,16 @@
 
         &.default {
             @include button-color('text', 'background', 'text');
+            border-width: var(--px);
+        }
+
+        &.transparent {
+            @include button-color('text', 'transparent', 'text');
+            border-width: var(--px);
+        }
+
+        &.transparent-inverted {
+            @include button-color('background', 'transparent', 'background');
             border-width: var(--px);
         }
 

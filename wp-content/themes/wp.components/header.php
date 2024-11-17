@@ -24,6 +24,8 @@ $blogUrl = esc_url(home_url('/'));
     <meta name="description" content="<?= $blogInfo . ' | ' . $blogDesc ?>">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
+    <link rel="stylesheet" href="https://use.typekit.net/hju5roj.css">
+
 
     <?php wp_head(); ?>
 
@@ -39,7 +41,7 @@ $blogUrl = esc_url(home_url('/'));
     <script defer src="<?= get_template_directory_uri() ?>/js/popper/popper.min.js"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/tippy/tippy.min.js"></script>
     <!-- tooltip libraries end -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.7.0/two.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.7.0/two.min.js"></script> -->
 
     <!-- simple lightbox  -->
     <link rel="stylesheet" href="<?= get_template_directory_uri() ?>/js/simple-lightbox/simple-lightbox.min.css">
@@ -70,6 +72,9 @@ $blogUrl = esc_url(home_url('/'));
     <script defer src="<?= get_template_directory_uri() ?>/js/gallery.min.js" type="module"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/post-types.js" type="module"></script>
     <script defer src="<?= get_template_directory_uri() ?>/js/letter-flip.js" type="module"></script>
+    <script defer src="<?= get_template_directory_uri() ?>/js/animate.js" type="module"></script>
+    <script defer src="<?= get_template_directory_uri() ?>/js/tilde-to-umlaut.js" type="module"></script>
+    <script defer src="<?= get_template_directory_uri() ?>/js/underline.js" type="module"></script>
     <!-- <script defer src="<?= get_template_directory_uri() ?>/js/object-info.min.js"></script> -->
     <!-- <script>
         /**
@@ -99,6 +104,7 @@ $blogUrl = esc_url(home_url('/'));
                         '<h1>
                     <a class="[ logo ]" href="' . $blogUrl . '" title="' . $blogInfo . '" rel="home" itemprop="url">
                         <img width="64px" height="64px" alt="' . $blogInfo . ' Logo" height="" src="' . get_custom_logo_url() . '" alt="' . $blogInfo . '">
+                        
                         <span class="[ blog-info ] vh">' . $blogInfo . '</span>
                     </a>
                     <h1>';
@@ -185,6 +191,31 @@ $blogUrl = esc_url(home_url('/'));
                     </section>
                 </div>
             </nav>
+            <div class="actions-navigation ">
+                <button class="d-none sm-d-flex" data-phrase="Nacht Modus" tooltip="Nacht Modus"
+                    tooltip-z-index="100000" tooltip-offset-y="5" tooltip-placement="bottom" tooltip-strategy="fixed"
+                    tooltip-trigger="mouseenter focus" tooltip-append-to="parent" title="Turn on Nightshift"
+                    nightshift-toggle class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                </button>
+                <!-- <div class="vr"></div> -->
+                <button class="d-none sm-d-flex" data-phrase="Dunkler Modus" tooltip="Dunkler Modus"
+                    tooltip-z-index="100000" tooltip-placement="bottom" tooltip-offset-y="5" tooltip-strategy="fixed"
+                    tooltip-trigger="mouseenter focus" title="Toggle Dark Mode" dark-mode-toggle class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </button>
+
+                <!-- <div class="vr"></div> -->
+            </div>
         </div>
         <!-- Mobile Nav End -->
 

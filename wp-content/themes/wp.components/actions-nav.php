@@ -1,5 +1,5 @@
-<div class="actions-navigation">
-  <button tooltip="Nightshift" tooltip-z-index="100000" tooltip-offset-y="5" tooltip-placement="bottom" tooltip-strategy="fixed"
+<div class="actions-navigation ">
+  <button class="d-none sm-d-flex" data-phrase="Nacht Modus" tooltip="Nacht Modus" tooltip-z-index="100000" tooltip-offset-y="5" tooltip-placement="bottom" tooltip-strategy="fixed"
     tooltip-trigger="mouseenter focus" tooltip-append-to="parent" title="Turn on Nightshift" nightshift-toggle class="">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round"
@@ -8,7 +8,7 @@
     </svg>
   </button>
   <!-- <div class="vr"></div> -->
-  <button tooltip="Dark Mode" tooltip-z-index="100000" tooltip-placement="bottom" tooltip-offset-y="5" tooltip-strategy="fixed"
+  <button class="d-none sm-d-flex" data-phrase="Dunkler Modus" tooltip="Dunkler Modus" tooltip-z-index="100000" tooltip-placement="bottom" tooltip-offset-y="5" tooltip-strategy="fixed"
     tooltip-trigger="mouseenter focus" title="Toggle Dark Mode" dark-mode-toggle class="">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
       class="">
@@ -16,7 +16,7 @@
         d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
     </svg>
   </button>
-  <div class="vr d-none sm-d-block"></div>
+  <div class="vr d-none sm-d-flex"></div>
   <div class="language-nav">
     <?php
     wp_nav_menu(array('theme_location' => 'lang-menu', 'link_before' => '<div itemprop="name" class="[ lang-nav-item ]">', 'link_after' => '</div>'));

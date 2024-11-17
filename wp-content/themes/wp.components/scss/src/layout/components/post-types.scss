@@ -2,14 +2,29 @@
   a {
     text-decoration: none;
     display: block;
-    padding-block: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
     border-bottom: var(--px) solid var(--color-background-dark);
     margin-bottom: var(--spacing-sm);
     color: inherit;
   }
 
+  h2, .meta, .image {
+    margin-bottom: 0.5em;
+  }
 
+  .image {
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    border: var(--px) solid var(--color-background-transparent);
+  }
 
+  .meta {
+    color: var(--color-text-transparent);
+  }
 
   // Layouts
   &.layout{

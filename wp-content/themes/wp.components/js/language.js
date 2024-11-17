@@ -25,32 +25,75 @@ function replaceTextByLanguage(langObj) {
 
 // Example usage:
 const languageObject = {
-  "en": [
-    "Englisch",
-    "English",
+  "es": [
+    "Spanisch",
+    "Español"
   ],
   "de": [
     "Deutsch",
-    "German"
+    "German",
   ]
 };
 replaceTextByLanguage(languageObject);
 
 
-// Tippy
+// if the document language is "es-AR" (Spanish - Argentina)
+// --> Change the content of a tooltip that has the the dtring "Dunkler Modus" to "Modo Oscuro"
+// --> Change the content of a tooltip that has the the dtring "Heller Modus" to "Modo Claro"
 
 document.addEventListener('DOMContentLoaded', function () {
-  const langNav = document.querySelectorAll('.language-nav');
-  langNav.forEach((nav) => {
-    const langNavItems = nav.querySelectorAll('.lang-item a');
-    langNavItems.forEach((item) => {
-      item.setAttribute('tooltip', 'Switch Language');
-      tippy(item, {
-        content: item.getAttribute('tooltip'),
-        placement: 'bottom',
-        arrow: false,
-        offset: [0, 5],
-      });
+  const lang = document.documentElement.lang;
+  if (lang === 'es-AR') {
+    const tooltips = document.querySelectorAll('[tooltip]');
+    tooltips.forEach((tooltip) => {
+      if (tooltip.textContent === 'Dunkler Modus') {
+        tooltip.hasAttribute('tooltip', 'Heller Modus') === true ? tooltip.setAttribute('tooltip', 'Modo Oscuro') : null;
+      } else if (tooltip.hasAttribute('tooltip', 'Heller Modus') === true) {
+        tooltip.hasAttribute('tooltip', 'Heller Modus') === true ? tooltip.setAttribute : null;
+      }
     });
-  });
+  }
 });
+
+/**
+ * Searches for all elements with a "tooltip" attribute and changes the tooltip text 
+ * from "Heller Modus" to "Modo Oscuro" if the document's language is "es-AR".
+ */
+function changeTooltipToSpanish() {
+  if (document.documentElement.lang === 'es-AR') {
+    // Find all elements with the "tooltip" attribute
+    const tooltipElements = document.querySelectorAll('[tooltip]');
+    tooltipElements.forEach(element => {
+      if (element.getAttribute('tooltip') === 'Sprache wechseln') {
+        // Change the tooltip attribute value to "Modo Oscuro"
+        element.setAttribute('tooltip', 'Cambiar Idioma');
+      }
+    });
+  }
+  // Check if the document language is "es-AR"
+  if (document.documentElement.lang === 'es-AR') {
+    // Find all elements with the "tooltip" attribute
+    const tooltipElements = document.querySelectorAll('[tooltip]');
+
+    // Loop through each element
+    tooltipElements.forEach(element => {
+      // Check if the tooltip attribute value is "Heller Modus"
+      if (element.getAttribute('tooltip') === 'Nacht Modus') {
+        // Change the tooltip attribute value to "Modo Oscuro"
+        element.setAttribute('tooltip', 'Turno de noche');
+      }
+      if (element.getAttribute('tooltip') === 'Nacht Modus') {
+        // Change the tooltip attribute value to "Modo Oscuro"
+        element.setAttribute('tooltip', 'Modo Oscuro');
+      }
+      if (element.getAttribute('tooltip') === 'Switch Languge') {
+        // Change the tooltip attribute value to "Modo Oscuro"
+        element.setAttribute('tooltip', 'Cambiar Idioma');
+      }
+    });
+  }
+}
+
+// Call the function to make the change
+changeTooltipToSpanish();
+// Tippy

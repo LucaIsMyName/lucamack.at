@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Umlaut-Tilde Morph</title>
+    <style>
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f0f0f0; }
+        svg { width: 300px; height: 150px; border: 1px solid #ccc; } /* Increased size and added border for visibility */
+    </style>
+</head>
+<body>
+    <svg viewBox="-5 -30 65 60" xmlns="http://www.w3.org/2000/svg">
+        <path id="morphPath" fill="black" d="M32.24,5.778H53.682V-14.56H32.24ZM2.6,5.778H24.042V-14.56H2.6Z"/>
+    </svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof gsap === 'undefined' || typeof MorphSVGPlugin === 'undefined') {
+            console.error('GSAP or MorphSVGPlugin not loaded');
+            return;
+        }
+
+        gsap.registerPlugin(MorphSVGPlugin);
+
+        const morphPath = document.getElementById('morphPath');
+        if (!morphPath) {
+            console.error('SVG path not found');
+            return;
+        }
+
+        const umlaut = "M32.24,5.778H53.682V-14.56H32.24ZM2.6,5.778H24.042V-14.56H2.6Z";
+        const tilde = "M13.106,9.357c.946-4.1,2.68-5.676,5.36-5.676,5.36,0,11.509,4.414,21.127,4.414,8.356,0,14.189-7.725,16.554-21.6L45.9-15.08C44.8-10.193,42.588-9.4,40.223-9.4c-5.991,0-11.509-4.1-20.811-4.1C9.637-13.5,5.065-4.517,2.7,7.465Z";
+
+        gsap.to(morphPath, {
+            duration: 2,
+            morphSVG: tilde,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+    });
+    </script>
+</body>
+</html>

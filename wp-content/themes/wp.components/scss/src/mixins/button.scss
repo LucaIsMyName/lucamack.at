@@ -27,6 +27,17 @@
     @include button();
 }
 
+@mixin button-transparent($border-color: 'text') {
+    @include button('text', 'transparent');
+    border-color: var(--px) solid var(--color-#{$border-color});
+}
+
+@mixin button-transparent-inverted($border-color: 'background', $background-color: 'background') {
+    @include button('text', 'transparent');
+    border-color: var(--px) solid var(--color-#{$border-color});
+    color: var(--color-#{$background-color});
+}
+
 @mixin button-disabled {
     @include button('text', 'background');
     opacity: 0.75;

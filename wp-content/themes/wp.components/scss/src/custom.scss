@@ -155,15 +155,15 @@ $project-color-schemes: (
             brand-dark: rgb(71, 84, 54),
             brand-light: rgb(178, 190, 160),
         ),
-        barbara-brandmueller: (text: rgb(75, 75, 129),
-            text-dark: rgb(36, 36, 75),
-            text-light: rgb(105, 105, 164),
-            background: rgb(255, 255, 226),
-            background-light: #ffffff,
-            background-dark: rgb(206, 206, 134),
-            brand: #ab2e30,
-            brand-dark: #891f21,
-            brand-light: #ab2e30,
+        barbara-brandmueller: (text: rgb(0, 0, 0),
+            text-dark: rgb(0, 0, 0),
+            text-light: rgb(50, 50, 83),
+            background: hsla(20, 0%, 99%, 1),
+            background-light: hsla(20, 0%, 99%, 1),
+            background-dark:rgb(234, 234, 234),
+            brand: #000000,
+            brand-dark: #000000,
+            brand-light: #000000,
         ),
         saiten-auf-null: (text: #044222,
             text-dark: #022a15,
@@ -229,13 +229,13 @@ $project-color-schemes: (
         ),
         barbara-brandmueller: (text: #ffffffde,
             text-dark: #ffffffde,
-            text-light: #ffffffde,
-            background: rgb(36, 36, 75),
-            background-light: rgb(105, 105, 164),
-            background-dark: rgb(105, 105, 164),
-            brand: #fffeb5,
-            brand-dark: #fffeb5,
-            brand-light: #fffeb5,
+            text-light: #c7c7c7de,
+            background: hsla(0, 0%, 7%, 1),
+            background-light: rgb(47, 47, 47),
+            background-dark: rgb(0, 0, 0),
+            brand: #ffffff,
+            brand-dark: #ffffff,
+            brand-light: #ffffff,
         ),
         saiten-auf-null: (text: #ffffffde,
             text-dark: #ffffffde,
@@ -474,7 +474,7 @@ $projects in $project-color-schemes {
 
 #third {
     &::before {
-        background-color: var(--color-blue);
+        background-color: var(--color-sky);
     }
 }
 

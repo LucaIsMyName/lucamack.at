@@ -37,7 +37,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --divider-color: var(--color-text-transparent);
   --divider-height: var(--px);
   /* Base Pixel */
-  --px: 1.5px;
+  --px: 2px;
   /* Spacings */
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -104,10 +104,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --size-inherit: inherit;
   /* Colors */
   /* Font Families */
-  --font-family-sans: geist-sans, -apple-system, Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-mono: geist-mono, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-family-serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
-  --font-family-display: geist-mono, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-sans: "Geist", -apple-system, Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-mono: "Geist Mono", "Palatino Linotype", "URW Palladio L", P052, serif;
+  --font-family-serif: "Times New Roman", "Palatino Linotype", "URW Palladio L", P052, serif;
+  --font-family-display: "Geist Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* Font Sizes */
   --font-size-xxs: 0.5rem;
   --font-size-xs: 0.75rem;
@@ -228,7 +228,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 [color-theme=light],
-.tooltip-content {
+[color-theme=light] .tooltip-content {
   /* Header*/
   --header--spacing: var(--spacing-sm);
   --header--logo-size: clamp(var(--size-1), 5vw, var(--size-1) * 1.5);
@@ -237,38 +237,38 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --header--color: var(--color-text);
   --header--opacity: 0.85;
   --header--blur: var(--blur-lg);
-  --header--border-color: rgba(0, 0, 0, 0.25);
+  --header--border-color: var(--color-text-transparent);
   --header--color-before-el: var(--color-text-transparent);
   /*Footer*/
   --footer--background-color: var(--color-background);
   /* HSL Defaults */
-  --hsl-brightness: 67%;
-  --hsl-brightness-1: 55%;
-  --hsl-brightness-2: 65%;
-  --hsl-brightness-3: 70%;
-  --hsl-bright: 100%;
+  --hsl-brightness: 40%;
+  --hsl-brightness-1: 35%;
+  --hsl-brightness-2: 38%;
+  --hsl-brightness-3: 45%;
+  --hsl-bright: 99%;
   --hsl-dark: 0%;
   --hsl-grey: 0%;
   --hsl-greyscale: 100%;
   --hsl-opacity: 1;
   --hsl-opacity-transparent: 0.33;
   /* HSL Color Definitions */
-  --hsl-red: 0;
+  --hsl-red: -22;
   --hsl-orange: 23;
   --hsl-yellow: 52;
   --hsl-lime: 85;
   --hsl-green: 118;
   --hsl-turquois: 157;
   --hsl-sky: 194;
-  --hsl-blue: 223;
+  --hsl-blue: 240;
   --hsl-violet: 247;
   --hsl-purple: 275;
   --hsl-pink: 312;
   --hsl-magenta: 321;
   --hsl-color-text: 0;
-  --hsl-color-background: 360;
+  --hsl-color-background: 20;
   --hsl-color-brand: var(--hsl-blue);
-  --hsl-color-secondary: var(--hsl-purple);
+  --hsl-color-secondary: var(--hsl-yellow);
   /* Default Colors*/
   --color-transparent: transparent;
   --color-success: hsla(var(--hsl-green), var(--hsl-greyscale), var(--hsl-brightness), 0.25);
@@ -300,23 +300,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --color-brand-dark: hsla(var(--hsl-color-brand), var(--hsl-greyscale), calc(var(--hsl-brightness) - 15%), var(--hsl-opacity));
   --color-brand-light: hsla(var(--hsl-color-brand), var(--hsl-greyscale), calc(var(--hsl-brightness) + 15%), var(--hsl-opacity));
   --color-brand-transparent: hsla(var(--hsl-color-brand), var(--hsl-greyscale), var(--hsl-brightness), var(--hsl-opacity-transparent));
-  --color-secondary: hsla(var(--hsl-color-secondary), var(--hsl-greyscale), var(--hsl-brightness), var(--hsl-opacity));
+  --color-secondary: hsla(var(--hsl-color-yellow), var(--hsl-greyscale), var(--hsl-brightness), var(--hsl-opacity));
   --color-secondary-dark: hsla(var(--hsl-color-secondary), 10%, calc(var(--hsl-brightness) - 15%), var(--hsl-opacity));
   --color-secondary-light: hsla(var(--hsl-color-secondary), 10%, calc(var(--hsl-brightness) + 15%), var(--hsl-opacity));
   --color-secondary-transparent: hsla(var(--hsl-color-secondary), 10%, var(--hsl-brightness), 33%);
 }
 
 [color-theme=dark],
-.tooltip-content {
+[color-theme=dark] .tooltip-content {
   /* Header*/
-  --header--spacing: var(--spacing-sm);
-  --header--logo-size: clamp(var(--size-1), 5vw, var(--size-1) * 1.5);
-  --header--height: calc(var(--header--spacing) * 2 + var(--header--logo-size));
   --header--background-color: var(--color-background-transparent);
   --header--color: var(--color-text);
   --header--opacity: 0.95;
   --header--blur: var(--blur-xxl);
-  --header--border-color: rgba(245, 245, 245, 0.25);
+  --header--border-color: var(--color-text);
   --header--color-before-el: var(--color-text-transparent);
   /*Footer*/
   --footer--background-color: var(--color-background);
@@ -345,7 +342,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --hsl-color-text: 0;
   --hsl-color-background: 360;
   --hsl-color-brand: var(--hsl-blue);
-  --hsl-color-secondary: var(--hsl-purple);
+  --hsl-color-secondary: var(--hsl-yellow);
   /* Default Colors*/
   --color-transparent: transparent;
   --color-success: hsla(var(--hsl-green), var(--hsl-greyscale), var(--hsl-brightness), 0.25);
@@ -1332,7 +1329,7 @@ input[type=search].search-input:focus {
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
   display: flex;
   gap: var(--spacing-sm);
   align-items: center;
@@ -1485,30 +1482,24 @@ input[type=search].search-input:focus {
     opacity: 0.5;
   }
 }
-.header :where(.nav,
-.menu) {
+.header :where(.nav, .menu) {
   display: flex;
   gap: var(--spacing-md);
   align-items: center;
 }
-.header :where(.nav,
-.menu) :where(ul) {
+.header :where(.nav, .menu) :where(ul) {
   list-style: none;
   margin: 0;
   padding-inline-start: 0;
 }
-.header :where(.nav,
-.menu) :where(li) {
+.header :where(.nav, .menu) :where(li) {
   font-size: var(--font-size-sm);
 }
-.header :where(.nav,
-.menu) :where(a) {
+.header :where(.nav, .menu) :where(a) {
   color: var(--color-text);
   text-decoration: none;
 }
-.header :where(.nav,
-.menu) :where(a):hover, .header :where(.nav,
-.menu) :where(a):focus {
+.header :where(.nav, .menu) :where(a):hover, .header :where(.nav, .menu) :where(a):focus {
   color: var(--color-text-light);
 }
 .header :where(.nav-action a) {
@@ -1539,6 +1530,7 @@ input[type=search].search-input:focus {
   inset: 0;
   overflow-y: scroll;
   overflow-x: hidden;
+  width: 100%;
 }
 [color-theme=dark] :where(.mobile-nav-container) .logo {
   filter: invert(1);
@@ -1756,6 +1748,7 @@ input[type=search].search-input:focus {
   align-items: center;
   justify-content: space-between;
   padding: var(--header--spacing);
+  width: 100%;
 }
 [data-mobile-nav-active=true].mobile-nav-container .brand a,
 [data-mobile-nav-active=true].mobile-nav-container .brand img {
@@ -1908,6 +1901,9 @@ input[type=search].search-input:focus {
 }
 .footer .menu-item {
   padding-bottom: 0;
+}
+.footer li a {
+  text-wrap: nowrap;
 }
 @media screen and (min-width: 960px) {
   .footer > * {
@@ -2062,6 +2058,12 @@ input[type=search].search-input:focus {
   margin-inline-end: calc(var(--spacing-xxs) / 4);
   color: var(--header--color-before-el);
   opacity: 0.5;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
 }
 
 /*
@@ -2300,6 +2302,29 @@ a:is(:hover, :focus) {
 }
 [nightshift=true] .nightshift-overlay {
   opacity: 1;
+}
+
+.animate-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(5px);
+  scale: 1.2;
+}
+.animate-logo svg {
+  color: currentColor !important;
+}
+
+.animate-tilde-to-umlaut > div {
+  display: inline-block !important;
+  aspect-ratio: auto !important;
+  height: auto !important;
+  width: 90% !important;
+}
+.animate-tilde-to-umlaut svg {
+  display: inline-block;
+  transform: translateY(0px);
+  scale: 1;
 }
 
 /*
@@ -2614,6 +2639,9 @@ a:is(:hover, :focus) {
   justify-content: var(--buttons--justify);
   gap: var(--buttons--spacing);
 }
+.block.buttons .text {
+  transform: translateY(-0.1em);
+}
 .block.buttons a {
   text-decoration: none;
 }
@@ -2696,6 +2724,18 @@ a:is(:hover, :focus) {
   background-color: var(--color-background);
   color: var(--color-text);
   border-color: var(--color-text);
+  border-width: var(--px);
+}
+.block.buttons .button.transparent {
+  background-color: var(--color-transparent);
+  color: var(--color-text);
+  border-color: var(--color-text);
+  border-width: var(--px);
+}
+.block.buttons .button.transparent-inverted {
+  background-color: var(--color-transparent);
+  color: var(--color-background);
+  border-color: var(--color-background);
   border-width: var(--px);
 }
 .block.buttons .button.disabled {
@@ -2985,10 +3025,16 @@ a:is(:hover, :focus) {
 .block.hero > .container > .image img {
   width: auto;
   min-width: 100%;
+  max-width: 100%;
   height: auto;
   min-height: 100%;
+  max-height: 100%;
   object-fit: cover;
   object-position: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 .block.hero > .container > .inner-blocks {
   width: 100%;
@@ -3190,8 +3236,22 @@ a:is(:hover, :focus) {
   }
 }
 
+.gallery {
+  position: relative;
+}
 .gallery [data-gallery-has-lightbox=false] a {
   pointer-events: none;
+}
+.gallery-item-description {
+  font-size: var(--font-size-sm);
+  font-weight: 100;
+  color: var(--color-text);
+  margin-top: var(--spacing-xs);
+  position: absolute;
+  bottom: var(--spacing-xs);
+  left: var(--spacing-xs);
+  right: var(--spacing-xs);
+  text-shadow: 0.075em 0.075em 0 var(--color-background), 0.075em -0.075em 0 var(--color-background), -0.075em 0.075em 0 var(--color-background), -0.075em -0.075em 0 var(--color-background), 0 0 0.5em var(--color-background);
 }
 .gallery.animate[data-viewport=false] a {
   filter: blur(var(--spacing-sm));
@@ -3603,10 +3663,25 @@ body:has([data-modal-active=true]) :is(.header, .footer) {
 .block.post-types a {
   text-decoration: none;
   display: block;
-  padding-block: var(--spacing-sm);
+  padding-bottom: var(--spacing-md);
   border-bottom: var(--px) solid var(--color-background-dark);
   margin-bottom: var(--spacing-sm);
   color: inherit;
+}
+.block.post-types h2, .block.post-types .meta, .block.post-types .image {
+  margin-bottom: 0.5em;
+}
+.block.post-types .image {
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  border: var(--px) solid var(--color-background-transparent);
+}
+.block.post-types .image img {
+  width: 100%;
+  height: auto;
+}
+.block.post-types .meta {
+  color: var(--color-text-transparent);
 }
 .grid-container > .container {
   display: grid;
@@ -3907,21 +3982,21 @@ body[color-theme=light]:has(#kaffeeamt[data-viewport=true]) :is(h1, h2, h3, h4, 
 
 body[color-theme=light]:has(#barbara-brandmueller[data-viewport=true]) {
   transition: background-color 0.3s ease;
-  --color-text: rgb(75, 75, 129);
-  --color-text-dark: rgb(36, 36, 75);
-  --color-text-light: rgb(105, 105, 164);
-  --color-background: rgb(255, 255, 226);
-  --color-background-light: #ffffff;
-  --color-background-dark: rgb(206, 206, 134);
-  --color-brand: #ab2e30;
-  --color-brand-dark: #891f21;
-  --color-brand-light: #ab2e30;
-  --header--color: rgb(75, 75, 129);
+  --color-text: rgb(0, 0, 0);
+  --color-text-dark: rgb(0, 0, 0);
+  --color-text-light: rgb(50, 50, 83);
+  --color-background: hsl(20, 0%, 99%);
+  --color-background-light: hsl(20, 0%, 99%);
+  --color-background-dark: rgb(234, 234, 234);
+  --color-brand: #000000;
+  --color-brand-dark: #000000;
+  --color-brand-light: #000000;
+  --header--color: rgb(0, 0, 0);
   --header--border-color: ;
   --header--color-before-el: ;
-  --header--background-color: rgb(255, 255, 226);
+  --header--background-color: hsl(20, 0%, 99%);
   --footer--color-before-el: ;
-  --footer--background-color: rgb(255, 255, 226);
+  --footer--background-color: hsl(20, 0%, 99%);
 }
 body[color-theme=light]:has(#barbara-brandmueller[data-viewport=true]) :is(h1, h2, h3, h4, h5, h6) {
   color: var(--color-brand);
@@ -4063,19 +4138,19 @@ body[color-theme=dark]:has(#barbara-brandmueller[data-viewport=true]) {
   transition: background-color 0.3s ease;
   --color-text: rgba(255, 255, 255, 0.8705882353);
   --color-text-dark: rgba(255, 255, 255, 0.8705882353);
-  --color-text-light: rgba(255, 255, 255, 0.8705882353);
-  --color-background: rgb(36, 36, 75);
-  --color-background-light: rgb(105, 105, 164);
-  --color-background-dark: rgb(105, 105, 164);
-  --color-brand: #fffeb5;
-  --color-brand-dark: #fffeb5;
-  --color-brand-light: #fffeb5;
+  --color-text-light: rgba(199, 199, 199, 0.8705882353);
+  --color-background: hsl(0, 0%, 7%);
+  --color-background-light: rgb(47, 47, 47);
+  --color-background-dark: rgb(0, 0, 0);
+  --color-brand: #ffffff;
+  --color-brand-dark: #ffffff;
+  --color-brand-light: #ffffff;
   --header--color: rgba(255, 255, 255, 0.8705882353);
   --header--border-color: ;
   --header--color-before-el: ;
-  --header--background-color: rgb(36, 36, 75);
+  --header--background-color: hsl(0, 0%, 7%);
   --footer--color-before-el: ;
-  --footer--background-color: rgb(36, 36, 75);
+  --footer--background-color: hsl(0, 0%, 7%);
 }
 body[color-theme=dark]:has(#barbara-brandmueller[data-viewport=true]) :is(h1, h2, h3, h4, h5, h6) {
   color: var(--color-brand);
@@ -4257,7 +4332,7 @@ body[color-theme=dark]:has(#goldenes-quartier[data-viewport=true]) :is(h1, h2, h
 }
 
 #third::before {
-  background-color: var(--color-blue);
+  background-color: var(--color-sky);
 }
 
 :is(#first, #second, #third)[data-viewport=false] .heading::before {
